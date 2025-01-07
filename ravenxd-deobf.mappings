@@ -52,10 +52,19 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 	FIELD a rand Ljava/util/Random;
 	FIELD b mc Lnet/minecraft/client/Minecraft;
 	FIELD d enemies Ljava/util/HashSet;
+	FIELD e friends Ljava/util/HashSet;
+	METHOD G isFriend (Lnet/minecraft/entity/player/EntityPlayer;)Z
 	METHOD Q nullCheck ()Z
+	METHOD a addFriend (Ljava/lang/String;)Z
+		ARG 0 name
 	METHOD aF getChroma (J[J)I
+	METHOD aW getEyeHeight ()F
+	METHOD g removeEnemy (Ljava/lang/String;)V
+		ARG 0 name
 	METHOD h addEnemy (Ljava/lang/String;)Z
 		ARG 0 name
+	METHOD i isWholeNumber (D)Z
+		ARG 0 num
 	METHOD u sendMessage (Ljava/lang/String;)V
 CLASS __pycache__/gf keystrokesmod/utility/interact/moveable/MoveableManager
 	METHOD a init ()V
@@ -97,13 +106,31 @@ CLASS __pycache__/s keystrokesmod/clickgui/ClickGui
 	METHOD a getFont ()L__pycache__/mS;
 CLASS it/unimi/dsi/fastutil/objects/Object2ObjectMap
 	METHOD values values ()Lit/unimi/dsi/fastutil/objects/ObjectCollection;
+CLASS keystrokesmod/mixins/MixinLoader
+	METHOD getASMTransformerClass getASMTransformerClass ()[Ljava/lang/String;
+	METHOD getAccessTransformerClass getAccessTransformerClass ()Ljava/lang/String;
+	METHOD getModContainerClass getModContainerClass ()Ljava/lang/String;
+	METHOD getSetupClass getSetupClass ()Ljava/lang/String;
+	METHOD injectData injectData (Ljava/util/Map;)V
+		ARG 1 map
 CLASS keystrokesmod/module/impl/client/discordrpc/AugustusRPC
 	METHOD lambda$onUpdate$0 ReadyEventHandler (L__pycache__/jN;)V
 	METHOD lambda$onUpdate$1 RpcCallback ()V
 CLASS keystrokesmod/module/impl/client/discordrpc/BadlionRPC
+	METHOD <init> (Ljava/lang/String;L__pycache__/jh;)V
+		ARG 1 name
+		ARG 2 parent
 	METHOD lambda$onUpdate$0 handleReadyEvent (L__pycache__/jN;)V
 	METHOD lambda$onUpdate$1 handleCallbackThread ()V
 CLASS keystrokesmod/script/ScriptManager
 	FIELD scripts scripts Lit/unimi/dsi/fastutil/objects/Object2ObjectArrayMap;
 	METHOD loadScripts loadScripts ()V
 	METHOD onEnable onEnable (Lkeystrokesmod/script/Script;)V
+CLASS org/spongepowered/asm/launch/MixinBootstrap
+	METHOD init init ()V
+CLASS org/spongepowered/asm/mixin/MixinEnvironment
+	METHOD getDefaultEnvironment getDefaultEnvironment ()Lorg/spongepowered/asm/mixin/MixinEnvironment;
+	METHOD setSide setSide (Lorg/spongepowered/asm/mixin/MixinEnvironment$Side;)Lorg/spongepowered/asm/mixin/MixinEnvironment;
+	CLASS Side
+CLASS org/spongepowered/asm/mixin/Mixins
+	METHOD addConfiguration addConfiguration (Ljava/lang/String;)V
