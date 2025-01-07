@@ -1,0 +1,104 @@
+CLASS __pycache__/Q keystrokesmod/utility/clicks/CPSCalculator
+CLASS __pycache__/bu keystrokesmod/eventbus/EventDispatcher
+	METHOD a init ()V
+CLASS __pycache__/bx keystrokesmod/keystroke/KeyStrokeConfigGui
+CLASS __pycache__/cB net/arikia/dev/drpc/DiscordRPC
+	METHOD a discordInitialize (Ljava/lang/String;L__pycache__/fJ;Z)V
+	METHOD f discordShutdown ()V
+	METHOD g discordRunCallbacks ()V
+	METHOD h discordUpdatePresence (L__pycache__/cU;)V
+CLASS __pycache__/cJ keystrokesmod/utility/I18nManager
+	METHOD a init ()V
+CLASS __pycache__/dt
+	METHOD b getValueInt (III)I
+CLASS __pycache__/dx keystrokesmod/Client
+	FIELD d mc Lnet/minecraft/client/Minecraft;
+	FIELD e keySrokeRenderer L__pycache__/kr;
+	FIELD f isKeyStrokeConfigGuiToggled Z
+	FIELD g executor Ljava/util/concurrent/ScheduledExecutorService;
+	FIELD h moduleManager L__pycache__/eE;
+	FIELD i EVENT_BUS L__pycache__/es;
+	FIELD j clickGui L__pycache__/s;
+	FIELD k profileManager L__pycache__/fP;
+	FIELD l scriptManager Lkeystrokesmod/script/ScriptManager;
+	FIELD n badPacketsHandler L__pycache__/lI;
+	METHOD a init (Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+	METHOD d getKeySrokeRenderer ()L__pycache__/kr;
+	METHOD f getExecutor ()Ljava/util/concurrent/ScheduledExecutorService;
+	METHOD g getModuleManager ()L__pycache__/eE;
+CLASS __pycache__/eE keystrokesmod/module/ModuleManager
+	FIELD C tower L__pycache__/gE;
+	FIELD ai rotationHandler L__pycache__/cX;
+	FIELD ap slotHandler L__pycache__/gD;
+	METHOD a register ()V
+	METHOD c getModules ()Ljava/util/List;
+CLASS __pycache__/es keystrokesmod/eventbus/EventBus
+	METHOD a register (Ljava/lang/Object;)V
+CLASS __pycache__/fP keystrokesmod/utility/profile/ProfileManager
+	FIELD c profiles Ljava/util/List;
+	METHOD g loadProfile ()V
+	METHOD k loadProfiles ()V
+CLASS __pycache__/fT keystrokesmod/utility/profile/Profile
+	METHOD a getModule ()L__pycache__/mL;
+CLASS __pycache__/fZ tech/skidonion/obfuscator/annotations/NativeObfuscation
+	METHOD a obfuscated ()Z
+CLASS __pycache__/fu Builder
+	METHOD a setReadyEventHandler (L__pycache__/gN;)L__pycache__/fu;
+	METHOD g build ()L__pycache__/fJ;
+CLASS __pycache__/fx keystrokesmod/utility/DebugInfoRenderer
+CLASS __pycache__/gM keystrokesmod/keystroke/keystrokeCommand
+CLASS __pycache__/ge keystrokesmod/utility/Utils
+	FIELD a rand Ljava/util/Random;
+	FIELD b mc Lnet/minecraft/client/Minecraft;
+	METHOD Q nullCheck ()Z
+	METHOD aF getChroma (J[J)I
+CLASS __pycache__/gf keystrokesmod/utility/interact/moveable/MoveableManager
+	METHOD a init ()V
+CLASS __pycache__/gj keystrokesmod/utility/AutoUpdate
+	METHOD a init ()V
+CLASS __pycache__/h keystrokesmod/module/setting/Setting
+CLASS __pycache__/iS Builder
+	METHOD a setDetails (Ljava/lang/String;)L__pycache__/iS;
+	METHOD d setBigImage (Ljava/lang/String;Ljava/lang/String;)L__pycache__/iS;
+	METHOD j build ()L__pycache__/cU;
+CLASS __pycache__/jf keystrokesmod/module/setting/impl/SubMode
+	FIELD ub parent L__pycache__/mL;
+	FIELD uc name Ljava/lang/String;
+	METHOD A getInfo ()Ljava/lang/String;
+	METHOD hQ getPrettyName ()Ljava/lang/String;
+	METHOD hR getRawPrettyName ()Ljava/lang/String;
+	METHOD hS registerSetting (L__pycache__/h;)V
+CLASS __pycache__/jh keystrokesmod/module/impl/client/DiscordRpc
+CLASS __pycache__/kC keystrokesmod/utility/Ping
+CLASS __pycache__/kr keystrokesmod/utility/KeySrokeRenderer
+CLASS __pycache__/lI keystrokesmod/utility/BadPacketsHandler
+CLASS __pycache__/ld keystrokesmod/utility/Reflection
+	METHOD a getFields ()V
+	METHOD b setKeyBindings ()V
+	METHOD c getMethods ()V
+CLASS __pycache__/mL keystrokesmod/module/Module
+	FIELD yz name Ljava/lang/String;
+	METHOD ar guiUpdate ()V
+	METHOD hj isEnabled ()Z
+	METHOD jL keybind ()V
+	METHOD jM canBeEnabled ()Z
+	METHOD jR getName ()Ljava/lang/String;
+	METHOD jZ moduleCategory ()L__pycache__/hF;
+	METHOD n onUpdate ()V
+CLASS __pycache__/mS
+	METHOD d drawCenteredString (Ljava/lang/String;DDI)V
+CLASS __pycache__/s keystrokesmod/clickgui/ClickGui
+	FIELD b aT L__pycache__/dt;
+	METHOD a getFont ()L__pycache__/mS;
+CLASS it/unimi/dsi/fastutil/objects/Object2ObjectMap
+	METHOD values values ()Lit/unimi/dsi/fastutil/objects/ObjectCollection;
+CLASS keystrokesmod/module/impl/client/discordrpc/AugustusRPC
+	METHOD lambda$onUpdate$0 ReadyEventHandler (L__pycache__/jN;)V
+	METHOD lambda$onUpdate$1 RpcCallback ()V
+CLASS keystrokesmod/module/impl/client/discordrpc/BadlionRPC
+	METHOD lambda$onUpdate$0 handleReadyEvent (L__pycache__/jN;)V
+	METHOD lambda$onUpdate$1 handleCallbackThread ()V
+CLASS keystrokesmod/script/ScriptManager
+	FIELD scripts scripts Lit/unimi/dsi/fastutil/objects/Object2ObjectArrayMap;
+	METHOD loadScripts loadScripts ()V
+	METHOD onEnable onEnable (Lkeystrokesmod/script/Script;)V
