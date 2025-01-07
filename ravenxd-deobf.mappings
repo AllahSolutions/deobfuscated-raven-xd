@@ -23,6 +23,7 @@ CLASS __pycache__/dx keystrokesmod/Client
 	FIELD l scriptManager Lkeystrokesmod/script/ScriptManager;
 	FIELD n badPacketsHandler L__pycache__/lI;
 	METHOD a init (Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+		ARG 1 ignored
 	METHOD d getKeySrokeRenderer ()L__pycache__/kr;
 	METHOD f getExecutor ()Ljava/util/concurrent/ScheduledExecutorService;
 	METHOD g getModuleManager ()L__pycache__/eE;
@@ -50,8 +51,12 @@ CLASS __pycache__/gM keystrokesmod/keystroke/keystrokeCommand
 CLASS __pycache__/ge keystrokesmod/utility/Utils
 	FIELD a rand Ljava/util/Random;
 	FIELD b mc Lnet/minecraft/client/Minecraft;
+	FIELD d enemies Ljava/util/HashSet;
 	METHOD Q nullCheck ()Z
 	METHOD aF getChroma (J[J)I
+	METHOD h addEnemy (Ljava/lang/String;)Z
+		ARG 0 name
+	METHOD u sendMessage (Ljava/lang/String;)V
 CLASS __pycache__/gf keystrokesmod/utility/interact/moveable/MoveableManager
 	METHOD a init ()V
 CLASS __pycache__/gj keystrokesmod/utility/AutoUpdate
