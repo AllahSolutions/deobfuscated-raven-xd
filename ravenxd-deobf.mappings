@@ -9,6 +9,10 @@ CLASS __pycache__/cB net/arikia/dev/drpc/DiscordRPC
 	METHOD h discordUpdatePresence (L__pycache__/cU;)V
 CLASS __pycache__/cJ keystrokesmod/utility/I18nManager
 	METHOD a init ()V
+CLASS __pycache__/dh keystrokesmod/module/impl/client/Notifications/NotificationTypes
+	FIELD au values [L__pycache__/dh;
+	METHOD valueOf (Ljava/lang/String;)L__pycache__/dh;
+		ARG 0 key
 CLASS __pycache__/dt
 	METHOD b getValueInt (III)I
 CLASS __pycache__/dx keystrokesmod/Client
@@ -22,6 +26,7 @@ CLASS __pycache__/dx keystrokesmod/Client
 	FIELD k profileManager L__pycache__/fP;
 	FIELD l scriptManager Lkeystrokesmod/script/ScriptManager;
 	FIELD n badPacketsHandler L__pycache__/lI;
+	FIELD o moduleCounter I
 	METHOD a init (Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
 		ARG 1 ignored
 	METHOD d getKeySrokeRenderer ()L__pycache__/kr;
@@ -29,6 +34,8 @@ CLASS __pycache__/dx keystrokesmod/Client
 	METHOD g getModuleManager ()L__pycache__/eE;
 CLASS __pycache__/eE keystrokesmod/module/ModuleManager
 	FIELD C tower L__pycache__/gE;
+	FIELD Q customName L__pycache__/hw;
+	FIELD a organizedModules Ljava/util/List;
 	FIELD ai rotationHandler L__pycache__/cX;
 	FIELD ap slotHandler L__pycache__/gD;
 	METHOD a register ()V
@@ -36,6 +43,7 @@ CLASS __pycache__/eE keystrokesmod/module/ModuleManager
 	METHOD c getModules ()Ljava/util/List;
 CLASS __pycache__/es keystrokesmod/eventbus/EventBus
 	METHOD a register (Ljava/lang/Object;)V
+	METHOD g unregister (Ljava/lang/Object;)V
 CLASS __pycache__/fP keystrokesmod/utility/profile/ProfileManager
 	FIELD c profiles Ljava/util/List;
 	METHOD g loadProfile ()V
@@ -60,6 +68,7 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 		ARG 0 name
 	METHOD aF getChroma (J[J)I
 	METHOD aW getEyeHeight ()F
+	METHOD bq handleException (Ljava/lang/Throwable;Ljava/lang/String;)V
 	METHOD g removeEnemy (Ljava/lang/String;)V
 		ARG 0 name
 	METHOD h addEnemy (Ljava/lang/String;)Z
@@ -72,6 +81,10 @@ CLASS __pycache__/gf keystrokesmod/utility/interact/moveable/MoveableManager
 CLASS __pycache__/gj keystrokesmod/utility/AutoUpdate
 	METHOD a init ()V
 CLASS __pycache__/h keystrokesmod/module/setting/Setting
+CLASS __pycache__/hF keystrokesmod/module/ModuleCategory
+	FIELD ci values [L__pycache__/hF;
+	METHOD valueOf (Ljava/lang/String;)L__pycache__/hF;
+		ARG 0 key
 CLASS __pycache__/iS Builder
 	METHOD a setDetails (Ljava/lang/String;)L__pycache__/iS;
 	METHOD b setStartTimestamps (J)L__pycache__/iS;
@@ -90,24 +103,65 @@ CLASS __pycache__/jf keystrokesmod/module/setting/impl/SubMode
 	METHOD hR getRawPrettyName ()Ljava/lang/String;
 	METHOD hS registerSetting (L__pycache__/h;)V
 CLASS __pycache__/jh keystrokesmod/module/impl/client/DiscordRpc
+	FIELD C modes L__pycache__/jn;
+CLASS __pycache__/jn keystrokesmod/module/setting/impl/ModeValue
+	METHOD L add (L__pycache__/jf;)L__pycache__/jn;
 CLASS __pycache__/kC keystrokesmod/utility/Ping
+CLASS __pycache__/kn keystrokesmod/module/impl/client/Notifications
+	METHOD iI sendNotification (L__pycache__/dh;Ljava/lang/String;)V
 CLASS __pycache__/kr keystrokesmod/utility/KeySrokeRenderer
 CLASS __pycache__/lI keystrokesmod/utility/BadPacketsHandler
+CLASS __pycache__/lL keystrokesmod/utility/i18n/I18nModule
+	METHOD a getName ()Ljava/lang/String;
 CLASS __pycache__/ld keystrokesmod/utility/Reflection
 	METHOD a getFields ()V
 	METHOD b setKeyBindings ()V
 	METHOD c getMethods ()V
 CLASS __pycache__/mL keystrokesmod/module/Module
+	FIELD yA moduleCategory L__pycache__/hF;
+	FIELD yB toolTip Ljava/lang/String;
+	FIELD yC canBeEnabled Z
+	FIELD yF script Lkeystrokesmod/script/Script;
+	FIELD yG i18nObject L__pycache__/lL;
+	FIELD yH prettyName Ljava/lang/String;
+	FIELD yJ enabled Z
+	FIELD yK keycode I
+	FIELD yw mc Lnet/minecraft/client/Minecraft;
+	FIELD yx settings Ljava/util/ArrayList;
+	FIELD yy settingsWeak Lscala/reflect/internal/util/WeakHashSet;
 	FIELD yz name Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;L__pycache__/hF;)V
+		ARG 1 moduleName
+		ARG 2 moduleCategory
+	METHOD <init> (Ljava/lang/String;L__pycache__/hF;I)V
+		ARG 1 moduleName
+		ARG 2 moduleCategory
+		ARG 3 keycode
+	METHOD <init> (Ljava/lang/String;L__pycache__/hF;ILjava/lang/String;)V
+		ARG 1 name
+		ARG 2 moduleCategory
+		ARG 3 keycode
+		ARG 4 toolTip
+	METHOD <init> (Ljava/lang/String;L__pycache__/hF;Ljava/lang/String;)V
+		ARG 1 name
+		ARG 2 category
+		ARG 3 toolTip
 	METHOD A getInfo ()Ljava/lang/String;
 	METHOD ar guiUpdate ()V
 	METHOD hQ getPrettyName ()Ljava/lang/String;
 	METHOD hR getRawPrettyName ()Ljava/lang/String;
+	METHOD hS registerSetting (L__pycache__/h;)V
 	METHOD hj isEnabled ()Z
 	METHOD jL keybind ()V
 	METHOD jM canBeEnabled ()Z
+	METHOD jO disable ()V
 	METHOD jR getName ()Ljava/lang/String;
+	METHOD jT getToolTip ()Ljava/lang/String;
 	METHOD jZ moduleCategory ()L__pycache__/hF;
+	METHOD k onDisable ()V
+	METHOD ke getI18nObject ()L__pycache__/lL;
+	METHOD kg setEnabled (Z)V
+		ARG 1 enabled
 	METHOD n onUpdate ()V
 CLASS __pycache__/mS
 	METHOD d drawCenteredString (Ljava/lang/String;DDI)V
@@ -140,11 +194,13 @@ CLASS keystrokesmod/script/ClassObject
 CLASS keystrokesmod/script/Diagnostic
 CLASS keystrokesmod/script/Manager
 CLASS keystrokesmod/script/Script
+	FIELD error error Z
 CLASS keystrokesmod/script/ScriptDefaults
 CLASS keystrokesmod/script/ScriptEvents
 CLASS keystrokesmod/script/ScriptManager
 	FIELD scripts scripts Lit/unimi/dsi/fastutil/objects/Object2ObjectArrayMap;
 	METHOD loadScripts loadScripts ()V
+	METHOD onDisable onDisable (Lkeystrokesmod/script/Script;)V
 	METHOD onEnable onEnable (Lkeystrokesmod/script/Script;)V
 CLASS keystrokesmod/script/classes/Block
 CLASS keystrokesmod/script/classes/Bridge
