@@ -1,4 +1,6 @@
 CLASS __pycache__/Q keystrokesmod/utility/clicks/CPSCalculator
+CLASS __pycache__/aE
+	METHOD g getInput ()D
 CLASS __pycache__/bu keystrokesmod/eventbus/EventDispatcher
 	METHOD a init ()V
 CLASS __pycache__/bx keystrokesmod/keystroke/KeyStrokeConfigGui
@@ -41,6 +43,7 @@ CLASS __pycache__/eE keystrokesmod/module/ModuleManager
 	METHOD a register ()V
 	METHOD b addModule (L__pycache__/mL;)V
 	METHOD c getModules ()Ljava/util/List;
+CLASS __pycache__/eS keystrokesmod/module/impl/client/Gui
 CLASS __pycache__/es keystrokesmod/eventbus/EventBus
 	METHOD a register (Ljava/lang/Object;)V
 	METHOD g unregister (Ljava/lang/Object;)V
@@ -56,6 +59,8 @@ CLASS __pycache__/fu Builder
 	METHOD a setReadyEventHandler (L__pycache__/gN;)L__pycache__/fu;
 	METHOD g build ()L__pycache__/fJ;
 CLASS __pycache__/fx keystrokesmod/utility/DebugInfoRenderer
+CLASS __pycache__/gB
+	METHOD A isToggled ()Z
 CLASS __pycache__/gM keystrokesmod/keystroke/keystrokeCommand
 CLASS __pycache__/ge keystrokesmod/utility/Utils
 	FIELD a rand Ljava/util/Random;
@@ -107,7 +112,11 @@ CLASS __pycache__/jh keystrokesmod/module/impl/client/DiscordRpc
 CLASS __pycache__/jn keystrokesmod/module/setting/impl/ModeValue
 	METHOD L add (L__pycache__/jf;)L__pycache__/jn;
 CLASS __pycache__/kC keystrokesmod/utility/Ping
+CLASS __pycache__/kG keystrokesmod/module/impl/client/Settings
+	FIELD vW toggleSound L__pycache__/bt;
+	METHOD iM getToggleSound (Z)Ljava/lang/String;
 CLASS __pycache__/kn keystrokesmod/module/impl/client/Notifications
+	FIELD vE moduleToggled L__pycache__/gB;
 	METHOD iI sendNotification (L__pycache__/dh;Ljava/lang/String;)V
 CLASS __pycache__/kr keystrokesmod/utility/KeySrokeRenderer
 CLASS __pycache__/lI keystrokesmod/utility/BadPacketsHandler
@@ -146,19 +155,27 @@ CLASS __pycache__/mL keystrokesmod/module/Module
 		ARG 1 name
 		ARG 2 category
 		ARG 3 toolTip
+	METHOD <init> (Lkeystrokesmod/script/Script;)V
+		ARG 1 script
 	METHOD A getInfo ()Ljava/lang/String;
 	METHOD ar guiUpdate ()V
 	METHOD hQ getPrettyName ()Ljava/lang/String;
 	METHOD hR getRawPrettyName ()Ljava/lang/String;
 	METHOD hS registerSetting (L__pycache__/h;)V
+	METHOD hi toggle ()V
 	METHOD hj isEnabled ()Z
 	METHOD jL keybind ()V
 	METHOD jM canBeEnabled ()Z
+	METHOD jN enable ()V
 	METHOD jO disable ()V
 	METHOD jR getName ()Ljava/lang/String;
 	METHOD jT getToolTip ()Ljava/lang/String;
+	METHOD jY removeSetting (L__pycache__/h;)V
+		ARG 1 setting
 	METHOD jZ moduleCategory ()L__pycache__/hF;
 	METHOD k onDisable ()V
+	METHOD ka setKeycode (I)V
+		ARG 1 keycode
 	METHOD ke getI18nObject ()L__pycache__/lL;
 	METHOD kg setEnabled (Z)V
 		ARG 1 enabled
@@ -195,6 +212,7 @@ CLASS keystrokesmod/script/Diagnostic
 CLASS keystrokesmod/script/Manager
 CLASS keystrokesmod/script/Script
 	FIELD error error Z
+	FIELD name name Ljava/lang/String;
 CLASS keystrokesmod/script/ScriptDefaults
 CLASS keystrokesmod/script/ScriptEvents
 CLASS keystrokesmod/script/ScriptManager
