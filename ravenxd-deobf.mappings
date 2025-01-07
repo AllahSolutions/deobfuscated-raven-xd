@@ -1,3 +1,5 @@
+CLASS __pycache__/E keystrokesmod/module/impl/exploit/ClientSpoofer
+	FIELD V customBrand Ljava/lang/String;
 CLASS __pycache__/Q keystrokesmod/utility/clicks/CPSCalculator
 CLASS __pycache__/aE
 	METHOD g getInput ()D
@@ -48,11 +50,21 @@ CLASS __pycache__/es keystrokesmod/eventbus/EventBus
 	METHOD a register (Ljava/lang/Object;)V
 	METHOD g unregister (Ljava/lang/Object;)V
 CLASS __pycache__/fP keystrokesmod/utility/profile/ProfileManager
+	FIELD b directory Ljava/io/File;
 	FIELD c profiles Ljava/util/List;
+	METHOD c fromCurrentState (I)Lcom/google/gson/JsonObject;
+		ARG 1 keyBind
+	METHOD d saveProfile (L__pycache__/fT;)V
+		ARG 1 profile
+	METHOD f getJsonObject (L__pycache__/mL;)Lcom/google/gson/JsonObject;
 	METHOD g loadProfile ()V
 	METHOD k loadProfiles ()V
+	METHOD n failedMessage (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 reason
+		ARG 2 name
 CLASS __pycache__/fT keystrokesmod/utility/profile/Profile
 	METHOD a getModule ()L__pycache__/mL;
+	METHOD c getName ()Ljava/lang/String;
 CLASS __pycache__/fZ tech/skidonion/obfuscator/annotations/NativeObfuscation
 	METHOD a obfuscated ()Z
 CLASS __pycache__/fu Builder
@@ -62,6 +74,8 @@ CLASS __pycache__/fx keystrokesmod/utility/DebugInfoRenderer
 CLASS __pycache__/gB
 	METHOD A isToggled ()Z
 CLASS __pycache__/gM keystrokesmod/keystroke/keystrokeCommand
+CLASS __pycache__/gV keystrokesmod/Consts
+	FIELD qP VERSION Ljava/lang/String;
 CLASS __pycache__/ge keystrokesmod/utility/Utils
 	FIELD a rand Ljava/util/Random;
 	FIELD b mc Lnet/minecraft/client/Minecraft;
@@ -130,9 +144,11 @@ CLASS __pycache__/mL keystrokesmod/module/Module
 	FIELD yA moduleCategory L__pycache__/hF;
 	FIELD yB toolTip Ljava/lang/String;
 	FIELD yC canBeEnabled Z
+	FIELD yD ignoreOnSave Z
 	FIELD yF script Lkeystrokesmod/script/Script;
 	FIELD yG i18nObject L__pycache__/lL;
 	FIELD yH prettyName Ljava/lang/String;
+	FIELD yI prettyInfo Ljava/lang/String;
 	FIELD yJ enabled Z
 	FIELD yK keycode I
 	FIELD yw mc Lnet/minecraft/client/Minecraft;
@@ -162,13 +178,18 @@ CLASS __pycache__/mL keystrokesmod/module/Module
 	METHOD hQ getPrettyName ()Ljava/lang/String;
 	METHOD hR getRawPrettyName ()Ljava/lang/String;
 	METHOD hS registerSetting (L__pycache__/h;)V
+		ARG 1 setting
 	METHOD hi toggle ()V
 	METHOD hj isEnabled ()Z
 	METHOD jL keybind ()V
 	METHOD jM canBeEnabled ()Z
 	METHOD jN enable ()V
 	METHOD jO disable ()V
+	METHOD jQ setPrettyInfo (Ljava/lang/String;)V
+		ARG 1 prettyInfo
 	METHOD jR getName ()Ljava/lang/String;
+	METHOD jS setPrettyName (Ljava/lang/String;)V
+		ARG 1 prettyName
 	METHOD jT getToolTip ()Ljava/lang/String;
 	METHOD jY removeSetting (L__pycache__/h;)V
 		ARG 1 setting
@@ -179,9 +200,12 @@ CLASS __pycache__/mL keystrokesmod/module/Module
 	METHOD ke getI18nObject ()L__pycache__/lL;
 	METHOD kg setEnabled (Z)V
 		ARG 1 enabled
+	METHOD kh getKeycode ()I
 	METHOD n onUpdate ()V
 CLASS __pycache__/mS
 	METHOD d drawCenteredString (Ljava/lang/String;DDI)V
+CLASS __pycache__/mr keystrokesmod/module/impl/other/KillMessage
+	FIELD xW killMessage Ljava/lang/String;
 CLASS __pycache__/s keystrokesmod/clickgui/ClickGui
 	FIELD b aT L__pycache__/dt;
 	METHOD a getFont ()L__pycache__/mS;
