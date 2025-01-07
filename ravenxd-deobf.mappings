@@ -32,6 +32,7 @@ CLASS __pycache__/eE keystrokesmod/module/ModuleManager
 	FIELD ai rotationHandler L__pycache__/cX;
 	FIELD ap slotHandler L__pycache__/gD;
 	METHOD a register ()V
+	METHOD b addModule (L__pycache__/mL;)V
 	METHOD c getModules ()Ljava/util/List;
 CLASS __pycache__/es keystrokesmod/eventbus/EventBus
 	METHOD a register (Ljava/lang/Object;)V
@@ -73,12 +74,18 @@ CLASS __pycache__/gj keystrokesmod/utility/AutoUpdate
 CLASS __pycache__/h keystrokesmod/module/setting/Setting
 CLASS __pycache__/iS Builder
 	METHOD a setDetails (Ljava/lang/String;)L__pycache__/iS;
+	METHOD b setStartTimestamps (J)L__pycache__/iS;
 	METHOD d setBigImage (Ljava/lang/String;Ljava/lang/String;)L__pycache__/iS;
 	METHOD j build ()L__pycache__/cU;
+CLASS __pycache__/jN net/arikia/dev/drpc/DiscordUser
 CLASS __pycache__/jf keystrokesmod/module/setting/impl/SubMode
 	FIELD ub parent L__pycache__/mL;
 	FIELD uc name Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;L__pycache__/mL;)V
+		ARG 1 name
+		ARG 2 parent
 	METHOD A getInfo ()Ljava/lang/String;
+	METHOD hP register ()V
 	METHOD hQ getPrettyName ()Ljava/lang/String;
 	METHOD hR getRawPrettyName ()Ljava/lang/String;
 	METHOD hS registerSetting (L__pycache__/h;)V
@@ -92,7 +99,10 @@ CLASS __pycache__/ld keystrokesmod/utility/Reflection
 	METHOD c getMethods ()V
 CLASS __pycache__/mL keystrokesmod/module/Module
 	FIELD yz name Ljava/lang/String;
+	METHOD A getInfo ()Ljava/lang/String;
 	METHOD ar guiUpdate ()V
+	METHOD hQ getPrettyName ()Ljava/lang/String;
+	METHOD hR getRawPrettyName ()Ljava/lang/String;
 	METHOD hj isEnabled ()Z
 	METHOD jL keybind ()V
 	METHOD jM canBeEnabled ()Z
@@ -117,15 +127,54 @@ CLASS keystrokesmod/module/impl/client/discordrpc/AugustusRPC
 	METHOD lambda$onUpdate$0 ReadyEventHandler (L__pycache__/jN;)V
 	METHOD lambda$onUpdate$1 RpcCallback ()V
 CLASS keystrokesmod/module/impl/client/discordrpc/BadlionRPC
+	FIELD clientId clientId Ljava/lang/String;
+	FIELD started started Z
 	METHOD <init> (Ljava/lang/String;L__pycache__/jh;)V
 		ARG 1 name
 		ARG 2 parent
 	METHOD lambda$onUpdate$0 handleReadyEvent (L__pycache__/jN;)V
+		ARG 0 user
 	METHOD lambda$onUpdate$1 handleCallbackThread ()V
+	METHOD onDisable onDisable ()V
+CLASS keystrokesmod/script/ClassObject
+CLASS keystrokesmod/script/Diagnostic
+CLASS keystrokesmod/script/Manager
+CLASS keystrokesmod/script/Script
+CLASS keystrokesmod/script/ScriptDefaults
+CLASS keystrokesmod/script/ScriptEvents
 CLASS keystrokesmod/script/ScriptManager
 	FIELD scripts scripts Lit/unimi/dsi/fastutil/objects/Object2ObjectArrayMap;
 	METHOD loadScripts loadScripts ()V
 	METHOD onEnable onEnable (Lkeystrokesmod/script/Script;)V
+CLASS keystrokesmod/script/classes/Block
+CLASS keystrokesmod/script/classes/Bridge
+CLASS keystrokesmod/script/classes/Entity
+CLASS keystrokesmod/script/classes/ItemStack
+CLASS keystrokesmod/script/classes/Json
+CLASS keystrokesmod/script/classes/NetworkPlayer
+CLASS keystrokesmod/script/classes/PlayerState
+CLASS keystrokesmod/script/classes/Request
+CLASS keystrokesmod/script/classes/Response
+CLASS keystrokesmod/script/classes/TileEntity
+CLASS keystrokesmod/script/classes/Vec3
+CLASS keystrokesmod/script/classes/World
+CLASS keystrokesmod/script/packets/clientbound/S12
+CLASS keystrokesmod/script/packets/clientbound/S27
+CLASS keystrokesmod/script/packets/clientbound/S3E
+CLASS keystrokesmod/script/packets/clientbound/SPacket
+CLASS keystrokesmod/script/packets/serverbound/C01
+CLASS keystrokesmod/script/packets/serverbound/C02
+CLASS keystrokesmod/script/packets/serverbound/C03
+CLASS keystrokesmod/script/packets/serverbound/C07
+CLASS keystrokesmod/script/packets/serverbound/C08
+CLASS keystrokesmod/script/packets/serverbound/C09
+CLASS keystrokesmod/script/packets/serverbound/C0A
+CLASS keystrokesmod/script/packets/serverbound/C0B
+CLASS keystrokesmod/script/packets/serverbound/C0E
+CLASS keystrokesmod/script/packets/serverbound/C0F
+CLASS keystrokesmod/script/packets/serverbound/C10
+CLASS keystrokesmod/script/packets/serverbound/CPacket
+CLASS keystrokesmod/script/packets/serverbound/PacketHandler
 CLASS org/spongepowered/asm/launch/MixinBootstrap
 	METHOD init init ()V
 CLASS org/spongepowered/asm/mixin/MixinEnvironment
