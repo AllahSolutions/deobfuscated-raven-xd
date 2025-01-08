@@ -1,8 +1,11 @@
 CLASS __pycache__/E keystrokesmod/module/impl/exploit/ClientSpoofer
 	FIELD V customBrand Ljava/lang/String;
 CLASS __pycache__/Q keystrokesmod/utility/clicks/CPSCalculator
-CLASS __pycache__/aE
+CLASS __pycache__/aE keystrokesmod/module/setting/interfaces/InputSetting
 	METHOD g getInput ()D
+CLASS __pycache__/au keystrokesmod/module/impl/render/HUD
+	FIELD dV posX I
+	FIELD dW posY I
 CLASS __pycache__/bu keystrokesmod/eventbus/EventDispatcher
 	METHOD a init ()V
 CLASS __pycache__/bx keystrokesmod/keystroke/KeyStrokeConfigGui
@@ -29,6 +32,7 @@ CLASS __pycache__/dx keystrokesmod/Client
 	FIELD j clickGui L__pycache__/s;
 	FIELD k profileManager L__pycache__/fP;
 	FIELD l scriptManager Lkeystrokesmod/script/ScriptManager;
+	FIELD m currentProfile L__pycache__/fT;
 	FIELD n badPacketsHandler L__pycache__/lI;
 	FIELD o moduleCounter I
 	METHOD a init (Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
@@ -45,23 +49,43 @@ CLASS __pycache__/eE keystrokesmod/module/ModuleManager
 	METHOD a register ()V
 	METHOD b addModule (L__pycache__/mL;)V
 	METHOD c getModules ()Ljava/util/List;
+	METHOD e getModule (Ljava/lang/String;)L__pycache__/mL;
 CLASS __pycache__/eS keystrokesmod/module/impl/client/Gui
 CLASS __pycache__/es keystrokesmod/eventbus/EventBus
 	METHOD a register (Ljava/lang/Object;)V
 	METHOD g unregister (Ljava/lang/Object;)V
 CLASS __pycache__/fP keystrokesmod/utility/profile/ProfileManager
+	FIELD a PROFILE_VERSION Ljava/lang/String;
 	FIELD b directory Ljava/io/File;
 	FIELD c profiles Ljava/util/List;
+	FIELD d desiredAssertionStatus Z
+	METHOD b updateLatest ()V
 	METHOD c fromCurrentState (I)Lcom/google/gson/JsonObject;
 		ARG 1 keyBind
 	METHOD d saveProfile (L__pycache__/fT;)V
 		ARG 1 profile
+	METHOD e saveToLatest (Lcom/google/gson/JsonObject;)V
+		ARG 1 profile
 	METHOD f getJsonObject (L__pycache__/mL;)Lcom/google/gson/JsonObject;
+		ARG 0 module
 	METHOD g loadProfile ()V
+	METHOD h loadProfile (Ljava/lang/String;)V
+		ARG 1 name
+	METHOD i loadFromJsonObject (Lcom/google/gson/JsonObject;L__pycache__/mL;)V
+		ARG 0 moduleInformation
+		ARG 1 module
+	METHOD j deleteProfile (Ljava/lang/String;)V
 	METHOD k loadProfiles ()V
+	METHOD l getProfileFiles ()Ljava/util/List;
+	METHOD m getProfile (Ljava/lang/String;)L__pycache__/fT;
 	METHOD n failedMessage (Ljava/lang/String;Ljava/lang/String;)V
 		ARG 1 reason
 		ARG 2 name
+	METHOD p sameCategoryFromJsonObjFilter (Lcom/google/gson/JsonObject;L__pycache__/jK;)Z
+		ARG 0 categoryObj
+		ARG 1 category
+	METHOD q isLatestProfile (Ljava/io/File;)Z
+		ARG 0 file
 CLASS __pycache__/fT keystrokesmod/utility/profile/Profile
 	METHOD a getModule ()L__pycache__/mL;
 	METHOD c getName ()Ljava/lang/String;
@@ -71,7 +95,8 @@ CLASS __pycache__/fu Builder
 	METHOD a setReadyEventHandler (L__pycache__/gN;)L__pycache__/fu;
 	METHOD g build ()L__pycache__/fJ;
 CLASS __pycache__/fx keystrokesmod/utility/DebugInfoRenderer
-CLASS __pycache__/gB
+CLASS __pycache__/gB keystrokesmod/module/setting/impl/ButtonSetting
+	FIELD l isMethodButton Z
 	METHOD A isToggled ()Z
 CLASS __pycache__/gM keystrokesmod/keystroke/keystrokeCommand
 CLASS __pycache__/gV keystrokesmod/Consts
@@ -81,6 +106,7 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 	FIELD b mc Lnet/minecraft/client/Minecraft;
 	FIELD d enemies Ljava/util/HashSet;
 	FIELD e friends Ljava/util/HashSet;
+	FIELD f log Lorg/apache/logging/log4j/Logger;
 	METHOD G isFriend (Lnet/minecraft/entity/player/EntityPlayer;)Z
 	METHOD Q nullCheck ()Z
 	METHOD a addFriend (Ljava/lang/String;)Z
@@ -100,6 +126,8 @@ CLASS __pycache__/gf keystrokesmod/utility/interact/moveable/MoveableManager
 CLASS __pycache__/gj keystrokesmod/utility/AutoUpdate
 	METHOD a init ()V
 CLASS __pycache__/h keystrokesmod/module/setting/Setting
+	FIELD d viewOnly Z
+	METHOD a getName ()Ljava/lang/String;
 CLASS __pycache__/hF keystrokesmod/module/ModuleCategory
 	FIELD ci values [L__pycache__/hF;
 	METHOD valueOf (Ljava/lang/String;)L__pycache__/hF;
@@ -109,6 +137,11 @@ CLASS __pycache__/iS Builder
 	METHOD b setStartTimestamps (J)L__pycache__/iS;
 	METHOD d setBigImage (Ljava/lang/String;Ljava/lang/String;)L__pycache__/iS;
 	METHOD j build ()L__pycache__/cU;
+CLASS __pycache__/jK keystrokesmod/clickgui/components/impl/CategoryComponent
+	FIELD b categoryName L__pycache__/hF;
+	METHOD g fv ()Z
+	METHOD t getY ()I
+	METHOD u getX ()I
 CLASS __pycache__/jN net/arikia/dev/drpc/DiscordUser
 CLASS __pycache__/jf keystrokesmod/module/setting/impl/SubMode
 	FIELD ub parent L__pycache__/mL;
@@ -132,6 +165,9 @@ CLASS __pycache__/kG keystrokesmod/module/impl/client/Settings
 CLASS __pycache__/kn keystrokesmod/module/impl/client/Notifications
 	FIELD vE moduleToggled L__pycache__/gB;
 	METHOD iI sendNotification (L__pycache__/dh;Ljava/lang/String;)V
+CLASS __pycache__/ko keystrokesmod/module/impl/render/TargetHUD
+	FIELD dV posX I
+	FIELD dW posY I
 CLASS __pycache__/kr keystrokesmod/utility/KeySrokeRenderer
 CLASS __pycache__/lI keystrokesmod/utility/BadPacketsHandler
 CLASS __pycache__/lL keystrokesmod/utility/i18n/I18nModule
@@ -191,12 +227,16 @@ CLASS __pycache__/mL keystrokesmod/module/Module
 	METHOD jS setPrettyName (Ljava/lang/String;)V
 		ARG 1 prettyName
 	METHOD jT getToolTip ()Ljava/lang/String;
+	METHOD jV getRawPrettyInfo ()Ljava/lang/String;
 	METHOD jY removeSetting (L__pycache__/h;)V
 		ARG 1 setting
 	METHOD jZ moduleCategory ()L__pycache__/hF;
 	METHOD k onDisable ()V
 	METHOD ka setKeycode (I)V
 		ARG 1 keycode
+	METHOD kb getSettings ()Ljava/util/ArrayList;
+	METHOD kc setHidden (Z)V
+	METHOD kd isHidden ()Z
 	METHOD ke getI18nObject ()L__pycache__/lL;
 	METHOD kg setEnabled (Z)V
 		ARG 1 enabled
@@ -208,6 +248,7 @@ CLASS __pycache__/mr keystrokesmod/module/impl/other/KillMessage
 	FIELD xW killMessage Ljava/lang/String;
 CLASS __pycache__/s keystrokesmod/clickgui/ClickGui
 	FIELD b aT L__pycache__/dt;
+	FIELD i categories Ljava/util/Map;
 	METHOD a getFont ()L__pycache__/mS;
 CLASS it/unimi/dsi/fastutil/objects/Object2ObjectMap
 	METHOD values values ()Lit/unimi/dsi/fastutil/objects/ObjectCollection;
