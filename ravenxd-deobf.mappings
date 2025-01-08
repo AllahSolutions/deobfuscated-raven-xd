@@ -177,11 +177,13 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 	FIELD f log Lorg/apache/logging/log4j/Logger;
 	METHOD G isFriend (Lnet/minecraft/entity/player/EntityPlayer;)Z
 	METHOD L correctValue (L__pycache__/jB;L__pycache__/jB;)V
+	METHOD N isFriended (Lnet/minecraft/entity/player/EntityPlayer;)Z
 	METHOD Q nullCheck ()Z
 	METHOD a addFriend (Ljava/lang/String;)Z
 		ARG 0 name
 	METHOD aF getChroma (J[J)I
 	METHOD aW getEyeHeight ()F
+	METHOD aa isTeamMate (Lnet/minecraft/entity/Entity;)Z
 	METHOD ay removeFormatCodes (Ljava/lang/String;)Ljava/lang/String;
 	METHOD bq handleException (Ljava/lang/Throwable;Ljava/lang/String;)V
 	METHOD g removeEnemy (Ljava/lang/String;)V
@@ -190,6 +192,7 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 		ARG 0 name
 	METHOD i isWholeNumber (D)Z
 		ARG 0 num
+	METHOD o inFov (FLnet/minecraft/entity/Entity;)Z
 	METHOD u sendMessage (Ljava/lang/String;)V
 CLASS __pycache__/gf keystrokesmod/utility/interact/moveable/MoveableManager
 	METHOD a init ()V
@@ -238,6 +241,39 @@ CLASS __pycache__/iT keystrokesmod/module/impl/movement/Sprint
 	METHOD h onPreMotion (L__pycache__/ly;)V
 		ARG 1 event
 CLASS __pycache__/ib keystrokesmod/utility/CoolDown
+CLASS __pycache__/ir keystrokesmod/event/client/MouseEvent
+	FIELD Y x I
+	FIELD Z y I
+	FIELD aa dx I
+	FIELD ab dy I
+	FIELD ac dwheel I
+	FIELD ad button I
+	FIELD ae buttonstate Z
+	FIELD af nanoseconds J
+	METHOD aD getX ()I
+	METHOD aE getY ()I
+	METHOD aF getDx ()I
+	METHOD aG getDy ()I
+	METHOD aH getDwheel ()I
+	METHOD aI getButton ()I
+	METHOD aJ isButtonstate ()Z
+	METHOD aK getNanoseconds ()J
+	METHOD aL setX (I)V
+		ARG 1 x
+	METHOD aM setY (I)V
+		ARG 1 y
+	METHOD aN setDx (I)V
+		ARG 1 dx
+	METHOD aO setDy (I)V
+		ARG 1 dy
+	METHOD aP setDwheel (I)V
+		ARG 1 dwheel
+	METHOD aQ setButton (I)V
+		ARG 1 button
+	METHOD aR setButtonstate (Z)V
+		ARG 1 buttonstate
+	METHOD aS setNanoseconds (J)V
+		ARG 1 nanoseconds
 CLASS __pycache__/jB keystrokesmod/module/setting/impl/SliderSetting
 CLASS __pycache__/jK keystrokesmod/clickgui/components/impl/CategoryComponent
 	FIELD b categoryName L__pycache__/hF;
@@ -266,6 +302,8 @@ CLASS __pycache__/kC keystrokesmod/utility/Ping
 CLASS __pycache__/kG keystrokesmod/module/impl/client/Settings
 	FIELD vW toggleSound L__pycache__/bt;
 	METHOD iM getToggleSound (Z)Ljava/lang/String;
+CLASS __pycache__/kV keystrokesmod/utility/RotationUtils
+	METHOD j getRotationsPredicted (Lnet/minecraft/entity/Entity;I)[F
 CLASS __pycache__/kn keystrokesmod/module/impl/client/Notifications
 	FIELD vE moduleToggled L__pycache__/gB;
 	METHOD iI sendNotification (L__pycache__/dh;Ljava/lang/String;)V
@@ -281,6 +319,7 @@ CLASS __pycache__/ld keystrokesmod/utility/Reflection
 	METHOD a getFields ()V
 	METHOD b setKeyBindings ()V
 	METHOD c getMethods ()V
+	METHOD f rightClick ()V
 CLASS __pycache__/li keystrokesmod/utility/render/ColorUtils
 CLASS __pycache__/lt keystrokesmod/eventbus/annotations/EventListener
 CLASS __pycache__/ly keystrokesmod/event/player/PreMotionEvent
@@ -331,6 +370,21 @@ CLASS __pycache__/ly keystrokesmod/event/player/PreMotionEvent
 		ARG 1 pitch
 	METHOD i getYaw ()F
 	METHOD j getPitch ()F
+CLASS __pycache__/mF keystrokesmod/module/impl/combat/RodAimbot
+	FIELD B ignoreTeammates L__pycache__/gB;
+	FIELD S fov L__pycache__/jB;
+	FIELD fE target Lnet/minecraft/entity/player/EntityPlayer;
+	FIELD hc rotate Z
+	FIELD iU rightClick Z
+	FIELD iv distance L__pycache__/jB;
+	FIELD yh predictedTicks L__pycache__/jB;
+	FIELD yi aimInvis L__pycache__/gB;
+	FIELD yj lookTicks I
+	METHOD aw onMouse (L__pycache__/ir;)V
+		ARG 1 mouseEvent
+	METHOD h onPreMotion (L__pycache__/ly;)V
+		ARG 1 event
+	METHOD iq getTarget ()Lnet/minecraft/entity/player/EntityPlayer;
 CLASS __pycache__/mK
 	METHOD jJ isEmpty ()Z
 CLASS __pycache__/mL keystrokesmod/module/Module
