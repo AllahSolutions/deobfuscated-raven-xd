@@ -1,9 +1,18 @@
 CLASS __pycache__/D keystrokesmod/module/impl/unmapped/combat/D
 CLASS __pycache__/E keystrokesmod/module/impl/exploit/ClientSpoofer
 	FIELD V customBrand Ljava/lang/String;
+CLASS __pycache__/I keystrokesmod/module/impl/unmapped/todo/I
+CLASS __pycache__/O keystrokesmod/module/impl/unmapped/todo/O
 CLASS __pycache__/Q keystrokesmod/utility/clicks/CPSCalculator
+CLASS __pycache__/R keystrokesmod/module/impl/unmapped/todo/R
+CLASS __pycache__/T keystrokesmod/module/impl/unmapped/todo/T
+CLASS __pycache__/W keystrokesmod/module/impl/unmapped/todo/W
+CLASS __pycache__/X keystrokesmod/module/impl/unmapped/todo/X
+CLASS __pycache__/a keystrokesmod/module/impl/unmapped/todo/a
+CLASS __pycache__/aB keystrokesmod/module/impl/unmapped/todo/aB
 CLASS __pycache__/aE keystrokesmod/module/setting/interfaces/InputSetting
 	METHOD g getInput ()D
+CLASS __pycache__/aI keystrokesmod/module/impl/unmapped/todo/aI
 CLASS __pycache__/aL keystrokesmod/module/impl/render/PlayerESP
 	FIELD eS outline L__pycache__/gB;
 	FIELD fN twoD L__pycache__/gB;
@@ -49,20 +58,39 @@ CLASS __pycache__/aR keystrokesmod/event/network/SendPacketEvent
 	METHOD B getPacket ()Lnet/minecraft/network/Packet;
 	METHOD C setPacket (Lnet/minecraft/network/Packet;)V
 		ARG 1 packet
+CLASS __pycache__/aW keystrokesmod/module/impl/unmapped/todo/aW
+CLASS __pycache__/aa keystrokesmod/module/impl/unmapped/todo/aa
+CLASS __pycache__/ab keystrokesmod/module/impl/unmapped/todo/ab
+CLASS __pycache__/af keystrokesmod/module/impl/unmapped/todo/af
+CLASS __pycache__/ag keystrokesmod/module/impl/unmapped/todo/ag
+CLASS __pycache__/ak keystrokesmod/module/impl/unmapped/todo/ak
+CLASS __pycache__/am keystrokesmod/module/impl/unmapped/todo/am
+CLASS __pycache__/ao keystrokesmod/module/impl/unmapped/todo/ao
 CLASS __pycache__/au keystrokesmod/module/impl/render/HUD
 	FIELD dV posX I
 	FIELD dW posY I
+CLASS __pycache__/b keystrokesmod/module/impl/unmapped/todo/b
+CLASS __pycache__/bT keystrokesmod/module/impl/unmapped/todo/bT
+CLASS __pycache__/bY keystrokesmod/module/impl/unmapped/todo/bY
+CLASS __pycache__/bf keystrokesmod/module/impl/unmapped/todo/bf
+CLASS __pycache__/bs keystrokesmod/module/impl/unmapped/todo/bs
 CLASS __pycache__/bt keystrokesmod/module/setting/impl/ModeSetting
 CLASS __pycache__/bu keystrokesmod/eventbus/EventDispatcher
 	METHOD a init ()V
+CLASS __pycache__/bw keystrokesmod/module/impl/unmapped/todo/bw
 CLASS __pycache__/bx keystrokesmod/keystroke/KeyStrokeConfigGui
 CLASS __pycache__/cB net/arikia/dev/drpc/DiscordRPC
 	METHOD a discordInitialize (Ljava/lang/String;L__pycache__/fJ;Z)V
 	METHOD f discordShutdown ()V
 	METHOD g discordRunCallbacks ()V
 	METHOD h discordUpdatePresence (L__pycache__/cU;)V
+CLASS __pycache__/cG keystrokesmod/module/impl/unmapped/todo/cG
 CLASS __pycache__/cJ keystrokesmod/utility/I18nManager
 	METHOD a init ()V
+CLASS __pycache__/cK keystrokesmod/module/impl/unmapped/todo/cK
+CLASS __pycache__/cL keystrokesmod/module/impl/unmapped/todo/cL
+CLASS __pycache__/cQ keystrokesmod/module/impl/unmapped/todo/cQ
+CLASS __pycache__/cR keystrokesmod/module/impl/unmapped/todo/cR
 CLASS __pycache__/cU net/arikia/dev/drpc/DiscordRichPresence
 	FIELD b details Ljava/lang/String;
 	FIELD c startTimestamp J
@@ -74,15 +102,30 @@ CLASS __pycache__/cU net/arikia/dev/drpc/DiscordRichPresence
 	FIELD l matchSecret Ljava/lang/String;
 	FIELD m spectateSecret Ljava/lang/String;
 	FIELD n joinSecret Ljava/lang/String;
+CLASS __pycache__/cX keystrokesmod/module/impl/unmapped/todo/cX
 CLASS __pycache__/cm keystrokesmod/module/impl/world/AntiBot
 	METHOD dK isBot (Lnet/minecraft/entity/Entity;)Z
+CLASS __pycache__/cr keystrokesmod/module/impl/unmapped/todo/cr
 CLASS __pycache__/ct keystrokesmod/event/client/PreTickEvent
+CLASS __pycache__/cu keystrokesmod/module/impl/unmapped/todo/cu
+CLASS __pycache__/cy keystrokesmod/module/impl/unmapped/todo/cy
+CLASS __pycache__/dD keystrokesmod/module/impl/unmapped/todo/dD
+CLASS __pycache__/dF keystrokesmod/module/impl/unmapped/todo/dF
+CLASS __pycache__/dH keystrokesmod/module/impl/unmapped/todo/dH
+CLASS __pycache__/dI keystrokesmod/module/impl/unmapped/todo/dI
+CLASS __pycache__/dN keystrokesmod/module/impl/unmapped/todo/dN
+CLASS __pycache__/dR keystrokesmod/module/impl/unmapped/todo/dR
+CLASS __pycache__/dS keystrokesmod/module/impl/unmapped/todo/dS
+CLASS __pycache__/dX keystrokesmod/module/impl/unmapped/todo/dX
 CLASS __pycache__/dh keystrokesmod/module/impl/client/Notifications/NotificationTypes
 	FIELD au values [L__pycache__/dh;
 	METHOD valueOf (Ljava/lang/String;)L__pycache__/dh;
 		ARG 0 key
+CLASS __pycache__/dk keystrokesmod/module/impl/unmapped/todo/dk
+CLASS __pycache__/dr keystrokesmod/module/impl/unmapped/todo/dr
 CLASS __pycache__/dt
 	METHOD b getValueInt (III)I
+CLASS __pycache__/dw keystrokesmod/module/impl/unmapped/todo/dw
 CLASS __pycache__/dx keystrokesmod/Client
 	FIELD c debugger Z
 	FIELD d mc Lnet/minecraft/client/Minecraft;
@@ -102,6 +145,9 @@ CLASS __pycache__/dx keystrokesmod/Client
 	METHOD d getKeySrokeRenderer ()L__pycache__/kr;
 	METHOD f getExecutor ()Ljava/util/concurrent/ScheduledExecutorService;
 	METHOD g getModuleManager ()L__pycache__/eE;
+CLASS __pycache__/dz keystrokesmod/module/impl/unmapped/todo/dz
+CLASS __pycache__/eB keystrokesmod/module/impl/unmapped/todo/eB
+CLASS __pycache__/eD keystrokesmod/module/impl/unmapped/todo/eD
 CLASS __pycache__/eE keystrokesmod/module/ModuleManager
 	FIELD C tower L__pycache__/gE;
 	FIELD Q customName L__pycache__/hw;
@@ -113,11 +159,18 @@ CLASS __pycache__/eE keystrokesmod/module/ModuleManager
 	METHOD b addModule (L__pycache__/mL;)V
 	METHOD c getModules ()Ljava/util/List;
 	METHOD e getModule (Ljava/lang/String;)L__pycache__/mL;
+CLASS __pycache__/eF keystrokesmod/module/impl/unmapped/todo/eF
 CLASS __pycache__/eK keystrokesmod/module/setting/impl/DescriptionSetting
 CLASS __pycache__/eS keystrokesmod/module/impl/client/Gui
+CLASS __pycache__/ei keystrokesmod/module/impl/unmapped/todo/ei
+CLASS __pycache__/en keystrokesmod/module/impl/unmapped/todo/en
+CLASS __pycache__/eq keystrokesmod/module/impl/unmapped/todo/eq
 CLASS __pycache__/es keystrokesmod/eventbus/EventBus
 	METHOD a register (Ljava/lang/Object;)V
 	METHOD g unregister (Ljava/lang/Object;)V
+CLASS __pycache__/ex keystrokesmod/module/impl/unmapped/todo/ex
+CLASS __pycache__/fF keystrokesmod/module/impl/unmapped/todo/fF
+CLASS __pycache__/fK keystrokesmod/module/impl/unmapped/todo/fK
 CLASS __pycache__/fP keystrokesmod/utility/profile/ProfileManager
 	FIELD a PROFILE_VERSION Ljava/lang/String;
 	FIELD b directory Ljava/io/File;
@@ -153,22 +206,38 @@ CLASS __pycache__/fP keystrokesmod/utility/profile/ProfileManager
 CLASS __pycache__/fT keystrokesmod/utility/profile/Profile
 	METHOD a getModule ()L__pycache__/mL;
 	METHOD c getName ()Ljava/lang/String;
+CLASS __pycache__/fU keystrokesmod/module/impl/unmapped/todo/fU
 CLASS __pycache__/fZ tech/skidonion/obfuscator/annotations/NativeObfuscation
 	METHOD a obfuscated ()Z
 CLASS __pycache__/fu Builder
 	METHOD a setReadyEventHandler (L__pycache__/gN;)L__pycache__/fu;
 	METHOD g build ()L__pycache__/fJ;
+CLASS __pycache__/fb keystrokesmod/module/impl/unmapped/todo/fb
+CLASS __pycache__/fd keystrokesmod/module/impl/unmapped/todo/fd
+CLASS __pycache__/fh keystrokesmod/module/impl/unmapped/todo/fh
+CLASS __pycache__/fj keystrokesmod/module/impl/unmapped/todo/fj
+CLASS __pycache__/fo keystrokesmod/module/impl/unmapped/todo/fo
+CLASS __pycache__/fr keystrokesmod/module/impl/unmapped/todo/fr
 CLASS __pycache__/fx keystrokesmod/utility/DebugInfoRenderer
+CLASS __pycache__/fz keystrokesmod/module/impl/unmapped/todo/fz
 CLASS __pycache__/gB keystrokesmod/module/setting/impl/ButtonSetting
 	FIELD l isMethodButton Z
 	METHOD A isToggled ()Z
 CLASS __pycache__/gC keystrokesmod/utility/render/RenderUtils
 	FIELD b ring_c Z
 	METHOD p renderEntity (Lnet/minecraft/entity/Entity;IDDIZ)V
+CLASS __pycache__/gD keystrokesmod/module/impl/unmapped/todo/gD
+CLASS __pycache__/gE keystrokesmod/module/impl/unmapped/todo/gE
 CLASS __pycache__/gF keystrokesmod/eventbus/Event
+CLASS __pycache__/gJ keystrokesmod/module/impl/unmapped/todo/gJ
+CLASS __pycache__/gL keystrokesmod/module/impl/unmapped/todo/gL
 CLASS __pycache__/gM keystrokesmod/keystroke/keystrokeCommand
+CLASS __pycache__/gO keystrokesmod/module/impl/unmapped/todo/gO
+CLASS __pycache__/gP keystrokesmod/module/impl/unmapped/todo/gP
 CLASS __pycache__/gV keystrokesmod/Consts
 	FIELD qP VERSION Ljava/lang/String;
+CLASS __pycache__/gZ keystrokesmod/module/impl/unmapped/todo/gZ
+CLASS __pycache__/gc keystrokesmod/module/impl/unmapped/todo/gc
 CLASS __pycache__/ge keystrokesmod/utility/Utils
 	FIELD a rand Ljava/util/Random;
 	FIELD b mc Lnet/minecraft/client/Minecraft;
@@ -196,8 +265,14 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 	METHOD u sendMessage (Ljava/lang/String;)V
 CLASS __pycache__/gf keystrokesmod/utility/interact/moveable/MoveableManager
 	METHOD a init ()V
+CLASS __pycache__/gg keystrokesmod/module/impl/unmapped/todo/gg
 CLASS __pycache__/gj keystrokesmod/utility/AutoUpdate
 	METHOD a init ()V
+CLASS __pycache__/gn keystrokesmod/module/impl/unmapped/todo/gn
+CLASS __pycache__/gp keystrokesmod/module/impl/unmapped/todo/gp
+CLASS __pycache__/gt keystrokesmod/module/impl/unmapped/todo/gt
+CLASS __pycache__/gx keystrokesmod/module/impl/unmapped/todo/gx
+CLASS __pycache__/gz keystrokesmod/module/impl/unmapped/todo/gz
 CLASS __pycache__/h keystrokesmod/module/setting/Setting
 	FIELD d viewOnly Z
 	METHOD a getName ()Ljava/lang/String;
@@ -205,6 +280,8 @@ CLASS __pycache__/hF keystrokesmod/module/ModuleCategory
 	FIELD ci values [L__pycache__/hF;
 	METHOD valueOf (Ljava/lang/String;)L__pycache__/hF;
 		ARG 0 key
+CLASS __pycache__/hI keystrokesmod/module/impl/unmapped/todo/hI
+CLASS __pycache__/hJ keystrokesmod/module/impl/unmapped/todo/hJ
 CLASS __pycache__/hQ keystrokesmod/eventbus/CancellableEvent
 	FIELD X cancelled Z
 	METHOD aB cancel ()V
@@ -213,8 +290,20 @@ CLASS __pycache__/hQ keystrokesmod/eventbus/CancellableEvent
 		ARG 1 object
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 object
+CLASS __pycache__/hS keystrokesmod/module/impl/unmapped/todo/hS
+CLASS __pycache__/hY keystrokesmod/module/impl/unmapped/todo/hY
+CLASS __pycache__/hd keystrokesmod/module/impl/unmapped/todo/hd
+CLASS __pycache__/hg keystrokesmod/module/impl/unmapped/todo/hg
+CLASS __pycache__/hs keystrokesmod/module/impl/unmapped/todo/hs
+CLASS __pycache__/ht keystrokesmod/module/impl/unmapped/todo/ht
+CLASS __pycache__/hu keystrokesmod/module/impl/unmapped/todo/hu
 CLASS __pycache__/hw keystrokesmod/module/impl/render/CustomName
 	FIELD rD info L__pycache__/gB;
+CLASS __pycache__/iF keystrokesmod/module/impl/unmapped/todo/iF
+CLASS __pycache__/iI keystrokesmod/module/impl/unmapped/todo/iI
+CLASS __pycache__/iK keystrokesmod/module/impl/unmapped/todo/iK
+CLASS __pycache__/iO keystrokesmod/module/impl/unmapped/todo/iO
+CLASS __pycache__/iR keystrokesmod/module/impl/unmapped/todo/iR
 CLASS __pycache__/iS Builder
 	FIELD a p L__pycache__/cU;
 	METHOD a setDetails (Ljava/lang/String;)L__pycache__/iS;
@@ -240,7 +329,9 @@ CLASS __pycache__/iT keystrokesmod/module/impl/movement/Sprint
 		ARG 1 e
 	METHOD h onPreMotion (L__pycache__/ly;)V
 		ARG 1 event
+CLASS __pycache__/iU keystrokesmod/module/impl/unmapped/todo/iU
 CLASS __pycache__/ib keystrokesmod/utility/CoolDown
+CLASS __pycache__/ig keystrokesmod/module/impl/unmapped/todo/ig
 CLASS __pycache__/ir keystrokesmod/event/client/MouseEvent
 	FIELD Y x I
 	FIELD Z y I
@@ -274,14 +365,22 @@ CLASS __pycache__/ir keystrokesmod/event/client/MouseEvent
 		ARG 1 buttonstate
 	METHOD aS setNanoseconds (J)V
 		ARG 1 nanoseconds
+CLASS __pycache__/iv keystrokesmod/module/impl/unmapped/todo/iv
 CLASS __pycache__/jB keystrokesmod/module/setting/impl/SliderSetting
+CLASS __pycache__/jH keystrokesmod/module/impl/unmapped/todo/jH
+CLASS __pycache__/jI keystrokesmod/module/impl/unmapped/todo/jI
 CLASS __pycache__/jK keystrokesmod/clickgui/components/impl/CategoryComponent
 	FIELD b categoryName L__pycache__/hF;
 	METHOD g fv ()Z
 	METHOD t getY ()I
 	METHOD u getX ()I
+CLASS __pycache__/jL keystrokesmod/module/impl/unmapped/todo/jL
+CLASS __pycache__/jM keystrokesmod/module/impl/unmapped/todo/jM
 CLASS __pycache__/jN net/arikia/dev/drpc/DiscordUser
 CLASS __pycache__/jT com/sun/jna/Structure
+CLASS __pycache__/jV keystrokesmod/module/impl/unmapped/todo/jV
+CLASS __pycache__/jc keystrokesmod/module/impl/unmapped/todo/jc
+CLASS __pycache__/je keystrokesmod/module/impl/unmapped/todo/je
 CLASS __pycache__/jf keystrokesmod/module/setting/impl/SubMode
 	FIELD ub parent L__pycache__/mL;
 	FIELD uc name Ljava/lang/String;
@@ -296,30 +395,57 @@ CLASS __pycache__/jf keystrokesmod/module/setting/impl/SubMode
 CLASS __pycache__/jg keystrokesmod/event/render/Render3DEvent
 CLASS __pycache__/jh keystrokesmod/module/impl/client/DiscordRpc
 	FIELD C modes L__pycache__/jn;
+CLASS __pycache__/jk keystrokesmod/module/impl/unmapped/todo/jk
+CLASS __pycache__/jl keystrokesmod/module/impl/unmapped/todo/jl
+CLASS __pycache__/jm keystrokesmod/module/impl/unmapped/todo/jm
 CLASS __pycache__/jn keystrokesmod/module/setting/impl/ModeValue
 	METHOD L add (L__pycache__/jf;)L__pycache__/jn;
+CLASS __pycache__/jq keystrokesmod/module/impl/unmapped/todo/jq
+CLASS __pycache__/jx keystrokesmod/module/impl/unmapped/todo/jx
+CLASS __pycache__/jy keystrokesmod/module/impl/unmapped/todo/jy
+CLASS __pycache__/kB keystrokesmod/module/impl/unmapped/todo/kB
 CLASS __pycache__/kC keystrokesmod/utility/Ping
+CLASS __pycache__/kD keystrokesmod/module/impl/unmapped/todo/kD
 CLASS __pycache__/kG keystrokesmod/module/impl/client/Settings
 	FIELD vW toggleSound L__pycache__/bt;
 	METHOD iM getToggleSound (Z)Ljava/lang/String;
+CLASS __pycache__/kS keystrokesmod/module/impl/unmapped/todo/kS
+CLASS __pycache__/kT keystrokesmod/module/impl/unmapped/todo/kT
 CLASS __pycache__/kV keystrokesmod/utility/RotationUtils
 	METHOD j getRotationsPredicted (Lnet/minecraft/entity/Entity;I)[F
+CLASS __pycache__/kX keystrokesmod/module/impl/unmapped/todo/kX
+CLASS __pycache__/kY keystrokesmod/module/impl/unmapped/todo/kY
+CLASS __pycache__/ka keystrokesmod/module/impl/unmapped/todo/ka
+CLASS __pycache__/ke keystrokesmod/module/impl/unmapped/todo/ke
+CLASS __pycache__/ki keystrokesmod/module/impl/unmapped/todo/ki
+CLASS __pycache__/kj keystrokesmod/module/impl/unmapped/todo/kj
+CLASS __pycache__/km keystrokesmod/module/impl/unmapped/todo/km
 CLASS __pycache__/kn keystrokesmod/module/impl/client/Notifications
 	FIELD vE moduleToggled L__pycache__/gB;
 	METHOD iI sendNotification (L__pycache__/dh;Ljava/lang/String;)V
 CLASS __pycache__/ko keystrokesmod/module/impl/render/TargetHUD
 	FIELD dV posX I
 	FIELD dW posY I
+CLASS __pycache__/kp keystrokesmod/module/impl/unmapped/todo/kp
 CLASS __pycache__/kr keystrokesmod/utility/KeySrokeRenderer
+CLASS __pycache__/kw keystrokesmod/module/impl/unmapped/todo/kw
+CLASS __pycache__/lA keystrokesmod/module/impl/unmapped/todo/lA
+CLASS __pycache__/lE keystrokesmod/module/impl/unmapped/todo/lE
+CLASS __pycache__/lH keystrokesmod/module/impl/unmapped/todo/lH
 CLASS __pycache__/lI keystrokesmod/utility/BadPacketsHandler
 CLASS __pycache__/lL keystrokesmod/utility/i18n/I18nModule
 	METHOD a getName ()Ljava/lang/String;
 	METHOD b getToolTip ()Ljava/lang/String;
+CLASS __pycache__/lR keystrokesmod/module/impl/unmapped/todo/lR
+CLASS __pycache__/lX keystrokesmod/module/impl/unmapped/todo/lX
+CLASS __pycache__/lZ keystrokesmod/module/impl/unmapped/todo/lZ
 CLASS __pycache__/ld keystrokesmod/utility/Reflection
 	METHOD a getFields ()V
 	METHOD b setKeyBindings ()V
 	METHOD c getMethods ()V
 	METHOD f rightClick ()V
+CLASS __pycache__/lf keystrokesmod/module/impl/unmapped/todo/lf
+CLASS __pycache__/lh keystrokesmod/module/impl/unmapped/todo/lh
 CLASS __pycache__/li keystrokesmod/utility/render/ColorUtils
 CLASS __pycache__/lt keystrokesmod/eventbus/annotations/EventListener
 CLASS __pycache__/ly keystrokesmod/event/player/PreMotionEvent
@@ -370,6 +496,7 @@ CLASS __pycache__/ly keystrokesmod/event/player/PreMotionEvent
 		ARG 1 pitch
 	METHOD i getYaw ()F
 	METHOD j getPitch ()F
+CLASS __pycache__/lz keystrokesmod/module/impl/unmapped/todo/lz
 CLASS __pycache__/mF keystrokesmod/module/impl/combat/RodAimbot
 	FIELD B ignoreTeammates L__pycache__/gB;
 	FIELD S fov L__pycache__/jB;
@@ -385,7 +512,9 @@ CLASS __pycache__/mF keystrokesmod/module/impl/combat/RodAimbot
 	METHOD h onPreMotion (L__pycache__/ly;)V
 		ARG 1 event
 	METHOD iq getTarget ()Lnet/minecraft/entity/player/EntityPlayer;
-CLASS __pycache__/mK
+CLASS __pycache__/mG keystrokesmod/module/impl/unmapped/todo/mG
+CLASS __pycache__/mH keystrokesmod/module/impl/unmapped/todo/mH
+CLASS __pycache__/mK keystrokesmod/module/impl/unmapped/todo/mK
 	METHOD jJ isEmpty ()Z
 CLASS __pycache__/mL keystrokesmod/module/Module
 	FIELD G isToggled Z
@@ -495,12 +624,24 @@ CLASS __pycache__/mV keystrokesmod/module/impl/player/InvManager
 		ARG 1 e
 	METHOD kB mineSpeed (Lnet/minecraft/item/ItemStack;)F
 		ARG 1 stack
+CLASS __pycache__/mX keystrokesmod/module/impl/unmapped/todo/mX
+CLASS __pycache__/md keystrokesmod/module/impl/unmapped/todo/md
+CLASS __pycache__/me keystrokesmod/module/impl/unmapped/todo/me
+CLASS __pycache__/mk keystrokesmod/module/impl/unmapped/todo/mk
+CLASS __pycache__/mm keystrokesmod/module/impl/unmapped/todo/mm
 CLASS __pycache__/mr keystrokesmod/module/impl/other/KillMessage
 	FIELD xW killMessage Ljava/lang/String;
+CLASS __pycache__/my keystrokesmod/module/impl/unmapped/todo/my
+CLASS __pycache__/n keystrokesmod/module/impl/unmapped/todo/n
+CLASS __pycache__/o keystrokesmod/module/impl/unmapped/todo/o
+CLASS __pycache__/p keystrokesmod/module/impl/unmapped/todo/p
+CLASS __pycache__/r keystrokesmod/module/impl/unmapped/todo/r
 CLASS __pycache__/s keystrokesmod/clickgui/ClickGui
 	FIELD b aT L__pycache__/dt;
 	FIELD i categories Ljava/util/Map;
 	METHOD a getFont ()L__pycache__/mS;
+CLASS __pycache__/x keystrokesmod/module/impl/unmapped/todo/x
+CLASS __pycache__/z keystrokesmod/module/impl/unmapped/todo/z
 CLASS it/unimi/dsi/fastutil/Function
 	METHOD clear clear ()V
 CLASS it/unimi/dsi/fastutil/objects/Object2IntFunction
