@@ -16,6 +16,17 @@ CLASS __pycache__/cB net/arikia/dev/drpc/DiscordRPC
 	METHOD h discordUpdatePresence (L__pycache__/cU;)V
 CLASS __pycache__/cJ keystrokesmod/utility/I18nManager
 	METHOD a init ()V
+CLASS __pycache__/cU net/arikia/dev/drpc/DiscordRichPresence
+	FIELD b details Ljava/lang/String;
+	FIELD c startTimestamp J
+	FIELD d endTimestamp J
+	FIELD e largeImageKey Ljava/lang/String;
+	FIELD f largeImageText Ljava/lang/String;
+	FIELD g smallImageKey Ljava/lang/String;
+	FIELD h smallImageText Ljava/lang/String;
+	FIELD l matchSecret Ljava/lang/String;
+	FIELD m spectateSecret Ljava/lang/String;
+	FIELD n joinSecret Ljava/lang/String;
 CLASS __pycache__/dh keystrokesmod/module/impl/client/Notifications/NotificationTypes
 	FIELD au values [L__pycache__/dh;
 	METHOD valueOf (Ljava/lang/String;)L__pycache__/dh;
@@ -133,9 +144,23 @@ CLASS __pycache__/hF keystrokesmod/module/ModuleCategory
 	METHOD valueOf (Ljava/lang/String;)L__pycache__/hF;
 		ARG 0 key
 CLASS __pycache__/iS Builder
+	FIELD a p L__pycache__/cU;
 	METHOD a setDetails (Ljava/lang/String;)L__pycache__/iS;
+		ARG 1 details
 	METHOD b setStartTimestamps (J)L__pycache__/iS;
+		ARG 1 start
+	METHOD c setEndTimestamps (J)L__pycache__/iS;
+		ARG 1 end
 	METHOD d setBigImage (Ljava/lang/String;Ljava/lang/String;)L__pycache__/iS;
+		ARG 1 key
+		ARG 2 text
+	METHOD e setSmallImage (Ljava/lang/String;Ljava/lang/String;)L__pycache__/iS;
+		ARG 1 key
+		ARG 2 text
+	METHOD g setSecrets (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)L__pycache__/iS;
+		ARG 1 match
+		ARG 2 join
+		ARG 3 spectate
 	METHOD j build ()L__pycache__/cU;
 CLASS __pycache__/jK keystrokesmod/clickgui/components/impl/CategoryComponent
 	FIELD b categoryName L__pycache__/hF;
@@ -143,6 +168,7 @@ CLASS __pycache__/jK keystrokesmod/clickgui/components/impl/CategoryComponent
 	METHOD t getY ()I
 	METHOD u getX ()I
 CLASS __pycache__/jN net/arikia/dev/drpc/DiscordUser
+CLASS __pycache__/jT com/sun/jna/Structure
 CLASS __pycache__/jf keystrokesmod/module/setting/impl/SubMode
 	FIELD ub parent L__pycache__/mL;
 	FIELD uc name Ljava/lang/String;
