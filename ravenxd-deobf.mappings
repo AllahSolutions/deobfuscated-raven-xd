@@ -42,6 +42,13 @@ CLASS __pycache__/aL keystrokesmod/module/impl/render/PlayerESP
 		ARG 0 player
 	METHOD t onRender3D (L__pycache__/jg;)V
 		ARG 1 event
+CLASS __pycache__/aR keystrokesmod/event/network/SendPacketEvent
+	FIELD q packet Lnet/minecraft/network/Packet;
+	METHOD <init> (Lnet/minecraft/network/Packet;)V
+		ARG 1 packet
+	METHOD B getPacket ()Lnet/minecraft/network/Packet;
+	METHOD C setPacket (Lnet/minecraft/network/Packet;)V
+		ARG 1 packet
 CLASS __pycache__/au keystrokesmod/module/impl/render/HUD
 	FIELD dV posX I
 	FIELD dW posY I
@@ -169,6 +176,7 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 	FIELD e friends Ljava/util/HashSet;
 	FIELD f log Lorg/apache/logging/log4j/Logger;
 	METHOD G isFriend (Lnet/minecraft/entity/player/EntityPlayer;)Z
+	METHOD L correctValue (L__pycache__/jB;L__pycache__/jB;)V
 	METHOD Q nullCheck ()Z
 	METHOD a addFriend (Ljava/lang/String;)Z
 		ARG 0 name
@@ -229,6 +237,7 @@ CLASS __pycache__/iT keystrokesmod/module/impl/movement/Sprint
 		ARG 1 e
 	METHOD h onPreMotion (L__pycache__/ly;)V
 		ARG 1 event
+CLASS __pycache__/ib keystrokesmod/utility/CoolDown
 CLASS __pycache__/jB keystrokesmod/module/setting/impl/SliderSetting
 CLASS __pycache__/jK keystrokesmod/clickgui/components/impl/CategoryComponent
 	FIELD b categoryName L__pycache__/hF;
@@ -267,6 +276,7 @@ CLASS __pycache__/kr keystrokesmod/utility/KeySrokeRenderer
 CLASS __pycache__/lI keystrokesmod/utility/BadPacketsHandler
 CLASS __pycache__/lL keystrokesmod/utility/i18n/I18nModule
 	METHOD a getName ()Ljava/lang/String;
+	METHOD b getToolTip ()Ljava/lang/String;
 CLASS __pycache__/ld keystrokesmod/utility/Reflection
 	METHOD a getFields ()V
 	METHOD b setKeyBindings ()V
@@ -324,10 +334,12 @@ CLASS __pycache__/ly keystrokesmod/event/player/PreMotionEvent
 CLASS __pycache__/mK
 	METHOD jJ isEmpty ()Z
 CLASS __pycache__/mL keystrokesmod/module/Module
+	FIELD G isToggled Z
 	FIELD yA moduleCategory L__pycache__/hF;
 	FIELD yB toolTip Ljava/lang/String;
 	FIELD yC canBeEnabled Z
 	FIELD yD ignoreOnSave Z
+	FIELD yE hidden Z
 	FIELD yF script Lkeystrokesmod/script/Script;
 	FIELD yG i18nObject L__pycache__/lL;
 	FIELD yH prettyName Ljava/lang/String;
@@ -358,6 +370,8 @@ CLASS __pycache__/mL keystrokesmod/module/Module
 		ARG 1 script
 	METHOD A getInfo ()Ljava/lang/String;
 	METHOD ar guiUpdate ()V
+	METHOD eQ guiButtonToggled (L__pycache__/gB;)V
+		ARG 1 b
 	METHOD hQ getPrettyName ()Ljava/lang/String;
 	METHOD hR getRawPrettyName ()Ljava/lang/String;
 	METHOD hS registerSetting (L__pycache__/h;)V
@@ -368,13 +382,19 @@ CLASS __pycache__/mL keystrokesmod/module/Module
 	METHOD jM canBeEnabled ()Z
 	METHOD jN enable ()V
 	METHOD jO disable ()V
+	METHOD jP getPrettyInfo ()Ljava/lang/String;
 	METHOD jQ setPrettyInfo (Ljava/lang/String;)V
 		ARG 1 prettyInfo
 	METHOD jR getName ()Ljava/lang/String;
 	METHOD jS setPrettyName (Ljava/lang/String;)V
 		ARG 1 prettyName
 	METHOD jT getToolTip ()Ljava/lang/String;
+	METHOD jU getPrettyToolTip ()Ljava/lang/String;
 	METHOD jV getRawPrettyInfo ()Ljava/lang/String;
+	METHOD jW registerSetting ([L__pycache__/h;)V
+		ARG 1 settings
+	METHOD jX registerSetting (Ljava/lang/Iterable;)V
+		ARG 1 setting
 	METHOD jY removeSetting (L__pycache__/h;)V
 		ARG 1 setting
 	METHOD jZ moduleCategory ()L__pycache__/hF;
@@ -383,14 +403,44 @@ CLASS __pycache__/mL keystrokesmod/module/Module
 		ARG 1 keycode
 	METHOD kb getSettings ()Ljava/util/ArrayList;
 	METHOD kc setHidden (Z)V
+		ARG 1 hidden
 	METHOD kd isHidden ()Z
 	METHOD ke getI18nObject ()L__pycache__/lL;
+	METHOD kf seti18nObject (L__pycache__/lL;)V
+		ARG 1 i18nObject
 	METHOD kg setEnabled (Z)V
 		ARG 1 enabled
 	METHOD kh getKeycode ()I
 	METHOD n onUpdate ()V
 CLASS __pycache__/mS
 	METHOD d drawCenteredString (Ljava/lang/String;DDI)V
+CLASS __pycache__/mV keystrokesmod/module/impl/player/InvManager
+	FIELD bo mode L__pycache__/bt;
+	FIELD ik notWhileMoving L__pycache__/gB;
+	FIELD kB shuffle L__pycache__/gB;
+	FIELD kx minStartDelay L__pycache__/jB;
+	FIELD ky maxStartDelay L__pycache__/jB;
+	FIELD zA rodSlot L__pycache__/jB;
+	FIELD zI placeTicks I
+	FIELD zl armor L__pycache__/gB;
+	FIELD zm minArmorDelay L__pycache__/jB;
+	FIELD zn maxArmorDelay L__pycache__/jB;
+	FIELD zo maxBlocks L__pycache__/jB;
+	FIELD zp maxArrows L__pycache__/jB;
+	FIELD zq maxThrowable L__pycache__/jB;
+	FIELD zr minCleanDelay L__pycache__/jB;
+	FIELD zs maxCleanDelay L__pycache__/jB;
+	FIELD zt sort L__pycache__/gB;
+	FIELD zu minSortDelay L__pycache__/jB;
+	FIELD zv maxSortDelay L__pycache__/jB;
+	FIELD zw swordSlot L__pycache__/jB;
+	FIELD zx blockSlot L__pycache__/jB;
+	FIELD zy bowSlot L__pycache__/jB;
+	FIELD zz foodSlot L__pycache__/jB;
+	METHOD E onSendPacket (L__pycache__/aR;)V
+		ARG 1 e
+	METHOD kB mineSpeed (Lnet/minecraft/item/ItemStack;)F
+		ARG 1 stack
 CLASS __pycache__/mr keystrokesmod/module/impl/other/KillMessage
 	FIELD xW killMessage Ljava/lang/String;
 CLASS __pycache__/s keystrokesmod/clickgui/ClickGui
