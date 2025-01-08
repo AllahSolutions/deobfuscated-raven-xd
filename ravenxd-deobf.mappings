@@ -1,11 +1,51 @@
+CLASS __pycache__/D keystrokesmod/module/impl/unmapped/combat/D
 CLASS __pycache__/E keystrokesmod/module/impl/exploit/ClientSpoofer
 	FIELD V customBrand Ljava/lang/String;
 CLASS __pycache__/Q keystrokesmod/utility/clicks/CPSCalculator
 CLASS __pycache__/aE keystrokesmod/module/setting/interfaces/InputSetting
 	METHOD g getInput ()D
+CLASS __pycache__/aL keystrokesmod/module/impl/render/PlayerESP
+	FIELD eS outline L__pycache__/gB;
+	FIELD fN twoD L__pycache__/gB;
+	FIELD fO arrow L__pycache__/gB;
+	FIELD fP box L__pycache__/gB;
+	FIELD fQ health L__pycache__/gB;
+	FIELD fR shaded L__pycache__/gB;
+	FIELD fS ring L__pycache__/gB;
+	FIELD fT expand L__pycache__/jB;
+	FIELD fU xShift L__pycache__/jB;
+	FIELD fV redOnDamaeg L__pycache__/gB;
+	FIELD fW showInvis L__pycache__/gB;
+	FIELD fX targets Lit/unimi/dsi/fastutil/objects/Object2IntOpenHashMap;
+	FIELD fY red L__pycache__/jB;
+	FIELD fZ green L__pycache__/jB;
+	FIELD ga blue L__pycache__/jB;
+	FIELD gb colorByName L__pycache__/gB;
+	FIELD gc rainbow L__pycache__/gB;
+	FIELD gd rgb I
+	METHOD cA shouldShow (Lnet/minecraft/entity/player/EntityPlayer;)Z
+	METHOD cB isAlive (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 player
+	METHOD cC isNotSelf (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 player
+	METHOD cv getColorFromTags (Ljava/lang/String;)I
+		ARG 0 displayName
+	METHOD cw render (Lnet/minecraft/entity/Entity;I)V
+		ARG 1 en
+		ARG 2 rgb
+	METHOD cx targetHandler (Lnet/minecraft/entity/EntityLivingBase;Ljava/lang/Integer;)V
+		ARG 1 target
+		ARG 2 rgb
+	METHOD cy addTargets (Lnet/minecraft/entity/player/EntityPlayer;)V
+		ARG 1 entity
+	METHOD cz isNotBot (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 player
+	METHOD t onRender3D (L__pycache__/jg;)V
+		ARG 1 event
 CLASS __pycache__/au keystrokesmod/module/impl/render/HUD
 	FIELD dV posX I
 	FIELD dW posY I
+CLASS __pycache__/bt keystrokesmod/module/setting/impl/ModeSetting
 CLASS __pycache__/bu keystrokesmod/eventbus/EventDispatcher
 	METHOD a init ()V
 CLASS __pycache__/bx keystrokesmod/keystroke/KeyStrokeConfigGui
@@ -27,6 +67,9 @@ CLASS __pycache__/cU net/arikia/dev/drpc/DiscordRichPresence
 	FIELD l matchSecret Ljava/lang/String;
 	FIELD m spectateSecret Ljava/lang/String;
 	FIELD n joinSecret Ljava/lang/String;
+CLASS __pycache__/cm keystrokesmod/module/impl/world/AntiBot
+	METHOD dK isBot (Lnet/minecraft/entity/Entity;)Z
+CLASS __pycache__/ct keystrokesmod/event/client/PreTickEvent
 CLASS __pycache__/dh keystrokesmod/module/impl/client/Notifications/NotificationTypes
 	FIELD au values [L__pycache__/dh;
 	METHOD valueOf (Ljava/lang/String;)L__pycache__/dh;
@@ -34,6 +77,7 @@ CLASS __pycache__/dh keystrokesmod/module/impl/client/Notifications/Notification
 CLASS __pycache__/dt
 	METHOD b getValueInt (III)I
 CLASS __pycache__/dx keystrokesmod/Client
+	FIELD c debugger Z
 	FIELD d mc Lnet/minecraft/client/Minecraft;
 	FIELD e keySrokeRenderer L__pycache__/kr;
 	FIELD f isKeyStrokeConfigGuiToggled Z
@@ -57,10 +101,12 @@ CLASS __pycache__/eE keystrokesmod/module/ModuleManager
 	FIELD a organizedModules Ljava/util/List;
 	FIELD ai rotationHandler L__pycache__/cX;
 	FIELD ap slotHandler L__pycache__/gD;
+	FIELD f murderMystery L__pycache__/mK;
 	METHOD a register ()V
 	METHOD b addModule (L__pycache__/mL;)V
 	METHOD c getModules ()Ljava/util/List;
 	METHOD e getModule (Ljava/lang/String;)L__pycache__/mL;
+CLASS __pycache__/eK keystrokesmod/module/setting/impl/DescriptionSetting
 CLASS __pycache__/eS keystrokesmod/module/impl/client/Gui
 CLASS __pycache__/es keystrokesmod/eventbus/EventBus
 	METHOD a register (Ljava/lang/Object;)V
@@ -109,6 +155,10 @@ CLASS __pycache__/fx keystrokesmod/utility/DebugInfoRenderer
 CLASS __pycache__/gB keystrokesmod/module/setting/impl/ButtonSetting
 	FIELD l isMethodButton Z
 	METHOD A isToggled ()Z
+CLASS __pycache__/gC keystrokesmod/utility/render/RenderUtils
+	FIELD b ring_c Z
+	METHOD p renderEntity (Lnet/minecraft/entity/Entity;IDDIZ)V
+CLASS __pycache__/gF keystrokesmod/eventbus/Event
 CLASS __pycache__/gM keystrokesmod/keystroke/keystrokeCommand
 CLASS __pycache__/gV keystrokesmod/Consts
 	FIELD qP VERSION Ljava/lang/String;
@@ -124,6 +174,7 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 		ARG 0 name
 	METHOD aF getChroma (J[J)I
 	METHOD aW getEyeHeight ()F
+	METHOD ay removeFormatCodes (Ljava/lang/String;)Ljava/lang/String;
 	METHOD bq handleException (Ljava/lang/Throwable;Ljava/lang/String;)V
 	METHOD g removeEnemy (Ljava/lang/String;)V
 		ARG 0 name
@@ -143,6 +194,16 @@ CLASS __pycache__/hF keystrokesmod/module/ModuleCategory
 	FIELD ci values [L__pycache__/hF;
 	METHOD valueOf (Ljava/lang/String;)L__pycache__/hF;
 		ARG 0 key
+CLASS __pycache__/hQ keystrokesmod/eventbus/CancellableEvent
+	FIELD X cancelled Z
+	METHOD aB cancel ()V
+	METHOD aC isCancelled ()Z
+	METHOD b isCancellable (Ljava/lang/Object;)Z
+		ARG 1 object
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 object
+CLASS __pycache__/hw keystrokesmod/module/impl/render/CustomName
+	FIELD rD info L__pycache__/gB;
 CLASS __pycache__/iS Builder
 	FIELD a p L__pycache__/cU;
 	METHOD a setDetails (Ljava/lang/String;)L__pycache__/iS;
@@ -162,6 +223,13 @@ CLASS __pycache__/iS Builder
 		ARG 2 join
 		ARG 3 spectate
 	METHOD j build ()L__pycache__/cU;
+CLASS __pycache__/iT keystrokesmod/module/impl/movement/Sprint
+	FIELD bo mode L__pycache__/bt;
+	METHOD at onPreTick (L__pycache__/ct;)V
+		ARG 1 e
+	METHOD h onPreMotion (L__pycache__/ly;)V
+		ARG 1 event
+CLASS __pycache__/jB keystrokesmod/module/setting/impl/SliderSetting
 CLASS __pycache__/jK keystrokesmod/clickgui/components/impl/CategoryComponent
 	FIELD b categoryName L__pycache__/hF;
 	METHOD g fv ()Z
@@ -180,6 +248,7 @@ CLASS __pycache__/jf keystrokesmod/module/setting/impl/SubMode
 	METHOD hQ getPrettyName ()Ljava/lang/String;
 	METHOD hR getRawPrettyName ()Ljava/lang/String;
 	METHOD hS registerSetting (L__pycache__/h;)V
+CLASS __pycache__/jg keystrokesmod/event/render/Render3DEvent
 CLASS __pycache__/jh keystrokesmod/module/impl/client/DiscordRpc
 	FIELD C modes L__pycache__/jn;
 CLASS __pycache__/jn keystrokesmod/module/setting/impl/ModeValue
@@ -202,6 +271,58 @@ CLASS __pycache__/ld keystrokesmod/utility/Reflection
 	METHOD a getFields ()V
 	METHOD b setKeyBindings ()V
 	METHOD c getMethods ()V
+CLASS __pycache__/li keystrokesmod/utility/render/ColorUtils
+CLASS __pycache__/lt keystrokesmod/eventbus/annotations/EventListener
+CLASS __pycache__/ly keystrokesmod/event/player/PreMotionEvent
+	FIELD ap setRenderYaw Z
+	FIELD aq posY D
+	FIELD ar posX D
+	FIELD as posZ D
+	FIELD at onGround Z
+	FIELD au isSprinting Z
+	FIELD av isSneaking Z
+	FIELD c yaw F
+	FIELD d pitch F
+	METHOD <init> (DDDFFZZZ)V
+		ARG 1 posX
+		ARG 3 posY
+		ARG 5 posZ
+		ARG 7 yaw
+		ARG 8 pitch
+		ARG 9 onGround
+		ARG 10 isSprinting
+		ARG 11 isSneaking
+	METHOD bd setRenderYaw ()Z
+	METHOD be setRenderYaw (Z)V
+		ARG 1 setRenderYaw
+	METHOD bf isSprinting ()Z
+	METHOD bg setSprinting (Z)V
+		ARG 1 isSprinting
+	METHOD bh isSneaking ()Z
+	METHOD bi setSneaking (Z)V
+		ARG 1 isSneaking
+	METHOD bj isEquals (Lkeystrokesmod/script/classes/PlayerState;)Z
+		ARG 1 e
+	METHOD bk setPosY (D)V
+		ARG 1 posY
+	METHOD bl getPosY ()D
+	METHOD bm setPosX (D)V
+		ARG 1 posX
+	METHOD bn getPosX ()D
+	METHOD bo setPosZ (D)V
+		ARG 1 posZ
+	METHOD bp getPosZ ()D
+	METHOD bq setOnGround (Z)V
+		ARG 1 onGround
+	METHOD br isOnGround ()Z
+	METHOD e setYaw (F)V
+		ARG 1 yaw
+	METHOD f setPitch (F)V
+		ARG 1 pitch
+	METHOD i getYaw ()F
+	METHOD j getPitch ()F
+CLASS __pycache__/mK
+	METHOD jJ isEmpty ()Z
 CLASS __pycache__/mL keystrokesmod/module/Module
 	FIELD yA moduleCategory L__pycache__/hF;
 	FIELD yB toolTip Ljava/lang/String;
@@ -276,6 +397,11 @@ CLASS __pycache__/s keystrokesmod/clickgui/ClickGui
 	FIELD b aT L__pycache__/dt;
 	FIELD i categories Ljava/util/Map;
 	METHOD a getFont ()L__pycache__/mS;
+CLASS it/unimi/dsi/fastutil/Function
+	METHOD clear clear ()V
+CLASS it/unimi/dsi/fastutil/objects/Object2IntFunction
+	METHOD put put (Ljava/lang/Object;I)I
+CLASS it/unimi/dsi/fastutil/objects/Object2IntOpenHashMap
 CLASS it/unimi/dsi/fastutil/objects/Object2ObjectMap
 	METHOD values values ()Lit/unimi/dsi/fastutil/objects/ObjectCollection;
 CLASS keystrokesmod/mixins/MixinLoader
@@ -285,6 +411,8 @@ CLASS keystrokesmod/mixins/MixinLoader
 	METHOD getSetupClass getSetupClass ()Ljava/lang/String;
 	METHOD injectData injectData (Ljava/util/Map;)V
 		ARG 1 map
+CLASS keystrokesmod/mixins/impl/client/KeyBindingAccessor
+	METHOD setPressed setPressed (Z)V
 CLASS keystrokesmod/module/impl/client/discordrpc/AugustusRPC
 	METHOD lambda$onUpdate$0 ReadyEventHandler (L__pycache__/jN;)V
 	METHOD lambda$onUpdate$1 RpcCallback ()V
@@ -318,6 +446,14 @@ CLASS keystrokesmod/script/classes/ItemStack
 CLASS keystrokesmod/script/classes/Json
 CLASS keystrokesmod/script/classes/NetworkPlayer
 CLASS keystrokesmod/script/classes/PlayerState
+	FIELD isSneaking isSneaking Z
+	FIELD isSprinting isSprinting Z
+	FIELD onGround onGround Z
+	FIELD pitch pitch F
+	FIELD x x D
+	FIELD y y D
+	FIELD yaw yaw F
+	FIELD z z D
 CLASS keystrokesmod/script/classes/Request
 CLASS keystrokesmod/script/classes/Response
 CLASS keystrokesmod/script/classes/TileEntity
