@@ -80,6 +80,9 @@ CLASS __pycache__/ab keystrokesmod/module/impl/unmapped/todo/ab
 CLASS __pycache__/af keystrokesmod/module/impl/unmapped/todo/af
 CLASS __pycache__/ag keystrokesmod/module/impl/unmapped/todo/ag
 CLASS __pycache__/ak keystrokesmod/module/impl/unmapped/todo/ak
+CLASS __pycache__/al keystrokesmod/module/impl/combat/KillAura
+	FIELD br target Lnet/minecraft/entity/EntityLivingBase;
+	METHOD ax noAimToEntity ()Z
 CLASS __pycache__/am keystrokesmod/module/impl/unmapped/todo/am
 CLASS __pycache__/ao keystrokesmod/module/impl/unmapped/todo/ao
 CLASS __pycache__/aq keystrokesmod/module/impl/other/chatai/ChatGPTChatAI
@@ -176,6 +179,7 @@ CLASS __pycache__/eE keystrokesmod/module/ModuleManager
 	FIELD ai rotationHandler L__pycache__/cX;
 	FIELD ap slotHandler L__pycache__/gD;
 	FIELD f murderMystery L__pycache__/mK;
+	FIELD n killAura L__pycache__/al;
 	METHOD a register ()V
 	METHOD b addModule (L__pycache__/mL;)V
 	METHOD c getModules ()Ljava/util/List;
@@ -311,6 +315,7 @@ CLASS __pycache__/gv keystrokesmod/module/impl/combat/criticals/AirStuckCritical
 	METHOD fW onPreMove (L__pycache__/ep;)V
 		ARG 1 event
 	METHOD gy canActive (Z)Z
+		ARG 1 jump
 	METHOD gz onPreVelocity (L__pycache__/fS;)V
 		ARG 1 event
 	METHOD h onPreMotion (L__pycache__/ly;)V
