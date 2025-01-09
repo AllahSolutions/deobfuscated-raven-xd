@@ -1,10 +1,17 @@
 CLASS __pycache__/D keystrokesmod/module/impl/unmapped/combat/D
 CLASS __pycache__/E keystrokesmod/module/impl/exploit/ClientSpoofer
 	FIELD V customBrand Ljava/lang/String;
-CLASS __pycache__/I keystrokesmod/module/impl/unmapped/todo/I
-CLASS __pycache__/O keystrokesmod/module/impl/unmapped/todo/O
+CLASS __pycache__/I keystrokesmod/module/impl/other/ChatAI
+	FIELD C mode L__pycache__/jn;
+	FIELD af chatGPT L__pycache__/aq;
+	METHOD S onChat (Ljava/lang/String;)V
+		ARG 1 message
+CLASS __pycache__/O keystrokesmod/module/impl/fun/ExtraBobbing
+	FIELD am level L__pycache__/jB;
+	FIELD an b Z
 CLASS __pycache__/Q keystrokesmod/utility/clicks/CPSCalculator
-CLASS __pycache__/R keystrokesmod/module/impl/unmapped/todo/R
+CLASS __pycache__/R keystrokesmod/module/impl/combat/Criticals
+	FIELD C mode L__pycache__/jn;
 CLASS __pycache__/T keystrokesmod/module/impl/unmapped/todo/T
 CLASS __pycache__/W keystrokesmod/module/impl/unmapped/todo/W
 CLASS __pycache__/X keystrokesmod/module/impl/unmapped/todo/X
@@ -12,6 +19,10 @@ CLASS __pycache__/a keystrokesmod/module/impl/unmapped/todo/a
 CLASS __pycache__/aB keystrokesmod/module/impl/unmapped/todo/aB
 CLASS __pycache__/aE keystrokesmod/module/setting/interfaces/InputSetting
 	METHOD g getInput ()D
+	METHOD h setValue (D)V
+		ARG 1 value
+	METHOD i getMin ()D
+	METHOD j getMax ()D
 CLASS __pycache__/aI keystrokesmod/module/impl/unmapped/todo/aI
 CLASS __pycache__/aL keystrokesmod/module/impl/render/PlayerESP
 	FIELD eS outline L__pycache__/gB;
@@ -58,6 +69,8 @@ CLASS __pycache__/aR keystrokesmod/event/network/SendPacketEvent
 	METHOD B getPacket ()Lnet/minecraft/network/Packet;
 	METHOD C setPacket (Lnet/minecraft/network/Packet;)V
 		ARG 1 packet
+CLASS __pycache__/aU
+	METHOD a getToolTip ()Ljava/lang/String;
 CLASS __pycache__/aW keystrokesmod/module/impl/unmapped/todo/aW
 CLASS __pycache__/aa keystrokesmod/module/impl/unmapped/todo/aa
 CLASS __pycache__/ab keystrokesmod/module/impl/unmapped/todo/ab
@@ -66,6 +79,7 @@ CLASS __pycache__/ag keystrokesmod/module/impl/unmapped/todo/ag
 CLASS __pycache__/ak keystrokesmod/module/impl/unmapped/todo/ak
 CLASS __pycache__/am keystrokesmod/module/impl/unmapped/todo/am
 CLASS __pycache__/ao keystrokesmod/module/impl/unmapped/todo/ao
+CLASS __pycache__/aq keystrokesmod/module/impl/other/chatai/ChatGPTChatAI
 CLASS __pycache__/au keystrokesmod/module/impl/render/HUD
 	FIELD dV posX I
 	FIELD dW posY I
@@ -109,6 +123,9 @@ CLASS __pycache__/cr keystrokesmod/module/impl/unmapped/todo/cr
 CLASS __pycache__/ct keystrokesmod/event/client/PreTickEvent
 CLASS __pycache__/cu keystrokesmod/module/impl/unmapped/todo/cu
 CLASS __pycache__/cy keystrokesmod/module/impl/unmapped/todo/cy
+CLASS __pycache__/dC keystrokesmod/module/impl/other/chatai/IChatAI
+	METHOD S getHelpMessage (Ljava/lang/String;)V
+	METHOD bg onChat ()Ljava/lang/Iterable;
 CLASS __pycache__/dD keystrokesmod/module/impl/unmapped/todo/dD
 CLASS __pycache__/dF keystrokesmod/module/impl/unmapped/todo/dF
 CLASS __pycache__/dH keystrokesmod/module/impl/unmapped/todo/dH
@@ -140,6 +157,7 @@ CLASS __pycache__/dx keystrokesmod/Client
 	FIELD m currentProfile L__pycache__/fT;
 	FIELD n badPacketsHandler L__pycache__/lI;
 	FIELD o moduleCounter I
+	FIELD p settingCounter I
 	METHOD a init (Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
 		ARG 1 ignored
 	METHOD d getKeySrokeRenderer ()L__pycache__/kr;
@@ -161,6 +179,8 @@ CLASS __pycache__/eE keystrokesmod/module/ModuleManager
 	METHOD e getModule (Ljava/lang/String;)L__pycache__/mL;
 CLASS __pycache__/eF keystrokesmod/module/impl/unmapped/todo/eF
 CLASS __pycache__/eK keystrokesmod/module/setting/impl/DescriptionSetting
+CLASS __pycache__/eL keystrokesmod/module/impl/combat/criticals/NoGroundCriticals
+CLASS __pycache__/eP keystrokesmod/module/impl/combat/criticals/LagCriticals
 CLASS __pycache__/eS keystrokesmod/module/impl/client/Gui
 CLASS __pycache__/ei keystrokesmod/module/impl/unmapped/todo/ei
 CLASS __pycache__/en keystrokesmod/module/impl/unmapped/todo/en
@@ -209,9 +229,6 @@ CLASS __pycache__/fT keystrokesmod/utility/profile/Profile
 CLASS __pycache__/fU keystrokesmod/module/impl/unmapped/todo/fU
 CLASS __pycache__/fZ tech/skidonion/obfuscator/annotations/NativeObfuscation
 	METHOD a obfuscated ()Z
-CLASS __pycache__/fu Builder
-	METHOD a setReadyEventHandler (L__pycache__/gN;)L__pycache__/fu;
-	METHOD g build ()L__pycache__/fJ;
 CLASS __pycache__/fb keystrokesmod/module/impl/unmapped/todo/fb
 CLASS __pycache__/fd keystrokesmod/module/impl/unmapped/todo/fd
 CLASS __pycache__/fh keystrokesmod/module/impl/unmapped/todo/fh
@@ -271,11 +288,30 @@ CLASS __pycache__/gj keystrokesmod/utility/AutoUpdate
 CLASS __pycache__/gn keystrokesmod/module/impl/unmapped/todo/gn
 CLASS __pycache__/gp keystrokesmod/module/impl/unmapped/todo/gp
 CLASS __pycache__/gt keystrokesmod/module/impl/unmapped/todo/gt
+CLASS __pycache__/gv __pycache__/keystrokesmod/module/impl/combat/criticals/AirStuckCriticals
 CLASS __pycache__/gx keystrokesmod/module/impl/unmapped/todo/gx
 CLASS __pycache__/gz keystrokesmod/module/impl/unmapped/todo/gz
 CLASS __pycache__/h keystrokesmod/module/setting/Setting
+	FIELD a toolTip Ljava/lang/String;
+	FIELD b n Ljava/lang/String;
+	FIELD c visibleCheck Ljava/util/function/Supplier;
 	FIELD d viewOnly Z
+	FIELD e parent L__pycache__/mL;
+	METHOD <init> (Ljava/lang/String;Ljava/util/function/Supplier;)V
+		ARG 1 n
+		ARG 2 visibleCheck
+	METHOD <init> (Ljava/lang/String;Ljava/util/function/Supplier;Ljava/lang/String;)V
+		ARG 1 n
+		ARG 2 visibleCheck
+		ARG 3 toolTip
 	METHOD a getName ()Ljava/lang/String;
+	METHOD b getToolTip ()Ljava/lang/String;
+	METHOD c getPrettyToolTip ()Ljava/lang/String;
+	METHOD d isVisible ()Z
+	METHOD e loadProfile (Lcom/google/gson/JsonObject;)V
+		ARG 1 data
+	METHOD f setParent (L__pycache__/mL;)V
+		ARG 1 parent
 CLASS __pycache__/hF keystrokesmod/module/ModuleCategory
 	FIELD ci values [L__pycache__/hF;
 	METHOD valueOf (Ljava/lang/String;)L__pycache__/hF;
@@ -399,7 +435,50 @@ CLASS __pycache__/jk keystrokesmod/module/impl/unmapped/todo/jk
 CLASS __pycache__/jl keystrokesmod/module/impl/unmapped/todo/jl
 CLASS __pycache__/jm keystrokesmod/module/impl/unmapped/todo/jm
 CLASS __pycache__/jn keystrokesmod/module/setting/impl/ModeValue
+	FIELD e parent L__pycache__/mL;
+	FIELD f settingName Ljava/lang/String;
+	FIELD p subModes Ljava/util/List;
+	FIELD q subSettings Ljava/util/Queue;
+	FIELD r selected I
+	FIELD s indexInSetting Ljava/lang/Integer;
+	METHOD <init> (Ljava/lang/String;L__pycache__/mL;)V
+		ARG 1 settingName
+		ARG 2 parent
+	METHOD <init> (Ljava/lang/String;L__pycache__/mL;Ljava/lang/String;)V
+		ARG 1 settingName
+		ARG 2 parent
+		ARG 3 toolTip
+	METHOD <init> (Ljava/lang/String;L__pycache__/mL;Ljava/util/function/Supplier;)V
+		ARG 1 settingName
+		ARG 2 parent
+		ARG 3 visibleCheck
+	METHOD <init> (Ljava/lang/String;L__pycache__/mL;Ljava/util/function/Supplier;Ljava/lang/String;)V
+		ARG 1 settingName
+		ARG 2 parent
+		ARG 3 visibleCheck
+		ARG 4 toolTip
+	METHOD C enable ()V
+	METHOD D disable ()V
 	METHOD L add (L__pycache__/jf;)L__pycache__/jn;
+		ARG 1 subMode
+	METHOD M getSubModeValues ()Ljava/util/List;
+	METHOD N setDefaultValue (Ljava/lang/String;)L__pycache__/jn;
+		ARG 1 name
+	METHOD O getSelected ()L__pycache__/jf;
+	METHOD P getSettingName ()Ljava/lang/String;
+	METHOD Q getParent ()L__pycache__/mL;
+	METHOD R getIndexInSetting ()Ljava/lang/Integer;
+	METHOD S setIndexInSetting (Ljava/lang/Integer;)V
+		ARG 1 indexInSetting
+	METHOD T subModeMatchesNameFilter (Ljava/lang/String;L__pycache__/jf;)Z
+		ARG 0 name
+		ARG 1 subMode
+	METHOD U settingVisibleCheckLambda (L__pycache__/jf;Ljava/util/function/Supplier;)Ljava/lang/Boolean;
+	METHOD q nextValue ()V
+	METHOD r prevValue ()V
+	METHOD s setValueRaw (I)V
+	METHOD u defaultVisibleCheck2 ()Ljava/lang/Boolean;
+	METHOD v defaultVisibleCheck ()Ljava/lang/Boolean;
 CLASS __pycache__/jq keystrokesmod/module/impl/unmapped/todo/jq
 CLASS __pycache__/jx keystrokesmod/module/impl/unmapped/todo/jx
 CLASS __pycache__/jy keystrokesmod/module/impl/unmapped/todo/jy
@@ -436,6 +515,8 @@ CLASS __pycache__/lI keystrokesmod/utility/BadPacketsHandler
 CLASS __pycache__/lL keystrokesmod/utility/i18n/I18nModule
 	METHOD a getName ()Ljava/lang/String;
 	METHOD b getToolTip ()Ljava/lang/String;
+	METHOD c getI18nObject ()Ljava/util/Map;
+CLASS __pycache__/lP keystrokesmod/module/impl/combat/criticals/TimerCriticals
 CLASS __pycache__/lR keystrokesmod/module/impl/unmapped/todo/lR
 CLASS __pycache__/lX keystrokesmod/module/impl/unmapped/todo/lX
 CLASS __pycache__/lZ keystrokesmod/module/impl/unmapped/todo/lZ
@@ -444,6 +525,7 @@ CLASS __pycache__/ld keystrokesmod/utility/Reflection
 	METHOD b setKeyBindings ()V
 	METHOD c getMethods ()V
 	METHOD f rightClick ()V
+CLASS __pycache__/le keystrokesmod/module/impl/combat/criticals/JumpCriticals
 CLASS __pycache__/lf keystrokesmod/module/impl/unmapped/todo/lf
 CLASS __pycache__/lh keystrokesmod/module/impl/unmapped/todo/lh
 CLASS __pycache__/li keystrokesmod/utility/render/ColorUtils
@@ -595,6 +677,7 @@ CLASS __pycache__/mL keystrokesmod/module/Module
 		ARG 1 enabled
 	METHOD kh getKeycode ()I
 	METHOD n onUpdate ()V
+	METHOD o onEnable ()V
 CLASS __pycache__/mS
 	METHOD d drawCenteredString (Ljava/lang/String;DDI)V
 CLASS __pycache__/mV keystrokesmod/module/impl/player/InvManager
@@ -646,7 +729,6 @@ CLASS it/unimi/dsi/fastutil/Function
 	METHOD clear clear ()V
 CLASS it/unimi/dsi/fastutil/objects/Object2IntFunction
 	METHOD put put (Ljava/lang/Object;I)I
-CLASS it/unimi/dsi/fastutil/objects/Object2IntOpenHashMap
 CLASS it/unimi/dsi/fastutil/objects/Object2ObjectMap
 	METHOD values values ()Lit/unimi/dsi/fastutil/objects/ObjectCollection;
 CLASS keystrokesmod/mixins/MixinLoader
@@ -671,25 +753,14 @@ CLASS keystrokesmod/module/impl/client/discordrpc/BadlionRPC
 		ARG 0 user
 	METHOD lambda$onUpdate$1 handleCallbackThread ()V
 	METHOD onDisable onDisable ()V
-CLASS keystrokesmod/script/ClassObject
-CLASS keystrokesmod/script/Diagnostic
-CLASS keystrokesmod/script/Manager
 CLASS keystrokesmod/script/Script
 	FIELD error error Z
 	FIELD name name Ljava/lang/String;
-CLASS keystrokesmod/script/ScriptDefaults
-CLASS keystrokesmod/script/ScriptEvents
 CLASS keystrokesmod/script/ScriptManager
 	FIELD scripts scripts Lit/unimi/dsi/fastutil/objects/Object2ObjectArrayMap;
 	METHOD loadScripts loadScripts ()V
 	METHOD onDisable onDisable (Lkeystrokesmod/script/Script;)V
 	METHOD onEnable onEnable (Lkeystrokesmod/script/Script;)V
-CLASS keystrokesmod/script/classes/Block
-CLASS keystrokesmod/script/classes/Bridge
-CLASS keystrokesmod/script/classes/Entity
-CLASS keystrokesmod/script/classes/ItemStack
-CLASS keystrokesmod/script/classes/Json
-CLASS keystrokesmod/script/classes/NetworkPlayer
 CLASS keystrokesmod/script/classes/PlayerState
 	FIELD isSneaking isSneaking Z
 	FIELD isSprinting isSprinting Z
@@ -699,28 +770,6 @@ CLASS keystrokesmod/script/classes/PlayerState
 	FIELD y y D
 	FIELD yaw yaw F
 	FIELD z z D
-CLASS keystrokesmod/script/classes/Request
-CLASS keystrokesmod/script/classes/Response
-CLASS keystrokesmod/script/classes/TileEntity
-CLASS keystrokesmod/script/classes/Vec3
-CLASS keystrokesmod/script/classes/World
-CLASS keystrokesmod/script/packets/clientbound/S12
-CLASS keystrokesmod/script/packets/clientbound/S27
-CLASS keystrokesmod/script/packets/clientbound/S3E
-CLASS keystrokesmod/script/packets/clientbound/SPacket
-CLASS keystrokesmod/script/packets/serverbound/C01
-CLASS keystrokesmod/script/packets/serverbound/C02
-CLASS keystrokesmod/script/packets/serverbound/C03
-CLASS keystrokesmod/script/packets/serverbound/C07
-CLASS keystrokesmod/script/packets/serverbound/C08
-CLASS keystrokesmod/script/packets/serverbound/C09
-CLASS keystrokesmod/script/packets/serverbound/C0A
-CLASS keystrokesmod/script/packets/serverbound/C0B
-CLASS keystrokesmod/script/packets/serverbound/C0E
-CLASS keystrokesmod/script/packets/serverbound/C0F
-CLASS keystrokesmod/script/packets/serverbound/C10
-CLASS keystrokesmod/script/packets/serverbound/CPacket
-CLASS keystrokesmod/script/packets/serverbound/PacketHandler
 CLASS org/spongepowered/asm/launch/MixinBootstrap
 	METHOD init init ()V
 CLASS org/spongepowered/asm/mixin/MixinEnvironment
