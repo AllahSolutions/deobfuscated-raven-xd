@@ -69,7 +69,10 @@ CLASS __pycache__/aR keystrokesmod/event/network/SendPacketEvent
 	METHOD B getPacket ()Lnet/minecraft/network/Packet;
 	METHOD C setPacket (Lnet/minecraft/network/Packet;)V
 		ARG 1 packet
-CLASS __pycache__/aU
+CLASS __pycache__/aU keystrokesmod/utility/i18n/settings/I18nSetting
+	FIELD a toolTip Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 1 toolTip
 	METHOD a getToolTip ()Ljava/lang/String;
 CLASS __pycache__/aW keystrokesmod/module/impl/unmapped/todo/aW
 CLASS __pycache__/aa keystrokesmod/module/impl/unmapped/todo/aa
@@ -288,7 +291,7 @@ CLASS __pycache__/gj keystrokesmod/utility/AutoUpdate
 CLASS __pycache__/gn keystrokesmod/module/impl/unmapped/todo/gn
 CLASS __pycache__/gp keystrokesmod/module/impl/unmapped/todo/gp
 CLASS __pycache__/gt keystrokesmod/module/impl/unmapped/todo/gt
-CLASS __pycache__/gv __pycache__/keystrokesmod/module/impl/combat/criticals/AirStuckCriticals
+CLASS __pycache__/gv keystrokesmod/module/impl/combat/criticals/AirStuckCriticals
 CLASS __pycache__/gx keystrokesmod/module/impl/unmapped/todo/gx
 CLASS __pycache__/gz keystrokesmod/module/impl/unmapped/todo/gz
 CLASS __pycache__/h keystrokesmod/module/setting/Setting
