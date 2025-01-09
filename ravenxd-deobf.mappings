@@ -187,6 +187,7 @@ CLASS __pycache__/eP keystrokesmod/module/impl/combat/criticals/LagCriticals
 CLASS __pycache__/eS keystrokesmod/module/impl/client/Gui
 CLASS __pycache__/ei keystrokesmod/module/impl/unmapped/todo/ei
 CLASS __pycache__/en keystrokesmod/module/impl/unmapped/todo/en
+CLASS __pycache__/ep keystrokesmod/event/player/PreMoveEvent
 CLASS __pycache__/eq keystrokesmod/module/impl/unmapped/todo/eq
 CLASS __pycache__/es keystrokesmod/eventbus/EventBus
 	METHOD a register (Ljava/lang/Object;)V
@@ -226,6 +227,7 @@ CLASS __pycache__/fP keystrokesmod/utility/profile/ProfileManager
 		ARG 1 category
 	METHOD q isLatestProfile (Ljava/io/File;)Z
 		ARG 0 file
+CLASS __pycache__/fS keystrokesmod/event/player/PreVelocityEvent
 CLASS __pycache__/fT keystrokesmod/utility/profile/Profile
 	METHOD a getModule ()L__pycache__/mL;
 	METHOD c getName ()Ljava/lang/String;
@@ -292,6 +294,27 @@ CLASS __pycache__/gn keystrokesmod/module/impl/unmapped/todo/gn
 CLASS __pycache__/gp keystrokesmod/module/impl/unmapped/todo/gp
 CLASS __pycache__/gt keystrokesmod/module/impl/unmapped/todo/gt
 CLASS __pycache__/gv keystrokesmod/module/impl/combat/criticals/AirStuckCriticals
+	FIELD R delay L__pycache__/jB;
+	FIELD eh autoJump L__pycache__/gB;
+	FIELD kd active Z
+	FIELD oL onlyKillAura L__pycache__/gB;
+	FIELD qj limitStuckTime L__pycache__/gB;
+	FIELD qk maxStuckTime L__pycache__/jB;
+	FIELD ql pauseOnVelocity L__pycache__/jB;
+	FIELD qm cancelC03 L__pycache__/gB;
+	FIELD qn disableTicks I
+	FIELD qo stuckTicks I
+	FIELD qp lastActive Z
+	METHOD <init> (Ljava/lang/String;L__pycache__/R;)V
+		ARG 1 name
+		ARG 2 parent
+	METHOD fW onPreMove (L__pycache__/ep;)V
+		ARG 1 event
+	METHOD gy canActive (Z)Z
+	METHOD gz onPreVelocity (L__pycache__/fS;)V
+		ARG 1 event
+	METHOD h onPreMotion (L__pycache__/ly;)V
+		ARG 1 e
 CLASS __pycache__/gx keystrokesmod/module/impl/unmapped/todo/gx
 CLASS __pycache__/gz keystrokesmod/module/impl/unmapped/todo/gz
 CLASS __pycache__/h keystrokesmod/module/setting/Setting
@@ -405,6 +428,8 @@ CLASS __pycache__/ir keystrokesmod/event/client/MouseEvent
 	METHOD aS setNanoseconds (J)V
 		ARG 1 nanoseconds
 CLASS __pycache__/iv keystrokesmod/module/impl/unmapped/todo/iv
+CLASS __pycache__/ix keystrokesmod/utility/MoveUtil
+	METHOD B jump ()V
 CLASS __pycache__/jB keystrokesmod/module/setting/impl/SliderSetting
 CLASS __pycache__/jH keystrokesmod/module/impl/unmapped/todo/jH
 CLASS __pycache__/jI keystrokesmod/module/impl/unmapped/todo/jI
@@ -533,6 +558,7 @@ CLASS __pycache__/lf keystrokesmod/module/impl/unmapped/todo/lf
 CLASS __pycache__/lh keystrokesmod/module/impl/unmapped/todo/lh
 CLASS __pycache__/li keystrokesmod/utility/render/ColorUtils
 CLASS __pycache__/lt keystrokesmod/eventbus/annotations/EventListener
+	METHOD f priority ()I
 CLASS __pycache__/ly keystrokesmod/event/player/PreMotionEvent
 	FIELD ap setRenderYaw Z
 	FIELD aq posY D
