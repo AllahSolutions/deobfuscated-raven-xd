@@ -1,6 +1,7 @@
 CLASS __pycache__/D keystrokesmod/module/impl/unmapped/combat/D
 CLASS __pycache__/E keystrokesmod/module/impl/exploit/ClientSpoofer
 	FIELD V customBrand Ljava/lang/String;
+CLASS __pycache__/F __pycache__/SwingEvent
 CLASS __pycache__/I keystrokesmod/module/impl/other/ChatAI
 	FIELD C mode L__pycache__/jn;
 	FIELD af chatGPT L__pycache__/aq;
@@ -10,20 +11,51 @@ CLASS __pycache__/O keystrokesmod/module/impl/fun/ExtraBobbing
 	FIELD am level L__pycache__/jB;
 	FIELD an b Z
 CLASS __pycache__/Q keystrokesmod/utility/clicks/CPSCalculator
+	FIELD a mc Lnet/minecraft/client/Minecraft;
+	FIELD b a Ljava/util/List;
+	FIELD c b Ljava/util/List;
+	FIELD d LL J
+	FIELD e LR J
+	METHOD a onMouseUpdate (L__pycache__/ir;)V
+		ARG 1 d
+	METHOD b aL ()V
+	METHOD c aR ()V
+	METHOD d f ()I
+	METHOD e i ()I
+	METHOD f lambda_2 (Ljava/lang/Long;)Z
+		ARG 0 o
+	METHOD g lambda_1 (Ljava/lang/Long;)Z
+		ARG 0 o
 CLASS __pycache__/R keystrokesmod/module/impl/combat/Criticals
 	FIELD C mode L__pycache__/jn;
-CLASS __pycache__/T keystrokesmod/module/impl/unmapped/todo/T
-CLASS __pycache__/W keystrokesmod/module/impl/unmapped/todo/W
-CLASS __pycache__/X keystrokesmod/module/impl/unmapped/todo/X
-CLASS __pycache__/a keystrokesmod/module/impl/unmapped/todo/a
-CLASS __pycache__/aB keystrokesmod/module/impl/unmapped/todo/aB
+CLASS __pycache__/T keystrokesmod/module/impl/player/AntiAFK
+	FIELD ap mode L__pycache__/bt;
+	FIELD aq jump L__pycache__/gB;
+	FIELD ar jumpOnlyWhenCollided L__pycache__/gB;
+	FIELD as randomClicks L__pycache__/gB;
+	FIELD at swapItem L__pycache__/gB;
+	FIELD au spin L__pycache__/bt;
+	FIELD av randomizeDelta L__pycache__/gB;
+	FIELD aw randomizePitch L__pycache__/gB;
+	FIELD ax minDelayTicks L__pycache__/jB;
+	FIELD ay maxDelayTicks L__pycache__/jB;
+CLASS __pycache__/W keystrokesmod/module/impl/unmapped/fun/W
+CLASS __pycache__/X keystrokesmod/module/impl/render/Radar
+	FIELD aH showTracerLines L__pycache__/gB;
+	FIELD aI scaleIdk I
+	FIELD aJ lineColor I
+CLASS __pycache__/a keystrokesmod/module/impl/world/FastPlace
+	FIELD a tickDelay L__pycache__/jB;
+	FIELD b blocksOnly L__pycache__/gB;
+	FIELD c pitchCheck L__pycache__/gB;
+CLASS __pycache__/aB keystrokesmod/module/impl/client/MiddleClick
 CLASS __pycache__/aE keystrokesmod/module/setting/interfaces/InputSetting
 	METHOD g getInput ()D
 	METHOD h setValue (D)V
 		ARG 1 value
 	METHOD i getMin ()D
 	METHOD j getMax ()D
-CLASS __pycache__/aI keystrokesmod/module/impl/unmapped/todo/aI
+CLASS __pycache__/aI keystrokesmod/module/impl/player/Backtrack
 CLASS __pycache__/aL keystrokesmod/module/impl/render/PlayerESP
 	FIELD eS outline L__pycache__/gB;
 	FIELD fN twoD L__pycache__/gB;
@@ -74,11 +106,11 @@ CLASS __pycache__/aU keystrokesmod/utility/i18n/settings/I18nSetting
 	METHOD <init> (Ljava/lang/String;)V
 		ARG 1 toolTip
 	METHOD a getToolTip ()Ljava/lang/String;
-CLASS __pycache__/aW keystrokesmod/module/impl/unmapped/todo/aW
-CLASS __pycache__/aa keystrokesmod/module/impl/unmapped/todo/aa
-CLASS __pycache__/ab keystrokesmod/module/impl/unmapped/todo/ab
-CLASS __pycache__/af keystrokesmod/module/impl/unmapped/todo/af
-CLASS __pycache__/ag keystrokesmod/module/impl/unmapped/todo/ag
+CLASS __pycache__/aW keystrokesmod/module/impl/player/AutoHeal
+CLASS __pycache__/aa keystrokesmod/module/impl/world/AutoTool
+CLASS __pycache__/ab keystrokesmod/module/impl/player/AutoPot
+CLASS __pycache__/af keystrokesmod/module/impl/render/MotionCamera
+CLASS __pycache__/ag keystrokesmod/module/impl/other/AutoPlay
 CLASS __pycache__/ak keystrokesmod/module/impl/unmapped/todo/ak
 CLASS __pycache__/al keystrokesmod/module/impl/combat/KillAura
 	FIELD br target Lnet/minecraft/entity/EntityLivingBase;
@@ -95,6 +127,17 @@ CLASS __pycache__/bY keystrokesmod/module/impl/unmapped/todo/bY
 CLASS __pycache__/bf keystrokesmod/module/impl/unmapped/todo/bf
 CLASS __pycache__/bs keystrokesmod/module/impl/unmapped/todo/bs
 CLASS __pycache__/bt keystrokesmod/module/setting/impl/ModeSetting
+	FIELD f name Ljava/lang/String;
+	FIELD g modes [Ljava/lang/String;
+	FIELD h input I
+	FIELD i max I
+	METHOD <init> (Ljava/lang/String;[Ljava/lang/String;ILjava/util/function/Supplier;Ljava/lang/String;)V
+		ARG 1 name
+		ARG 2 modes
+		ARG 3 defaultInput
+	METHOD p setValue (I)V
+	METHOD s setInput (I)V
+		ARG 1 input
 CLASS __pycache__/bu keystrokesmod/eventbus/EventDispatcher
 	METHOD a init ()V
 CLASS __pycache__/bw keystrokesmod/module/impl/unmapped/todo/bw
@@ -126,6 +169,7 @@ CLASS __pycache__/cX keystrokesmod/module/impl/unmapped/todo/cX
 CLASS __pycache__/cm keystrokesmod/module/impl/world/AntiBot
 	METHOD dK isBot (Lnet/minecraft/entity/Entity;)Z
 CLASS __pycache__/cr keystrokesmod/module/impl/unmapped/todo/cr
+	METHOD dR onLeftClickMouse ()V
 CLASS __pycache__/ct keystrokesmod/event/client/PreTickEvent
 CLASS __pycache__/cu keystrokesmod/module/impl/unmapped/todo/cu
 CLASS __pycache__/cy keystrokesmod/module/impl/unmapped/todo/cy
@@ -136,15 +180,20 @@ CLASS __pycache__/dD keystrokesmod/module/impl/unmapped/todo/dD
 CLASS __pycache__/dF keystrokesmod/module/impl/unmapped/todo/dF
 CLASS __pycache__/dH keystrokesmod/module/impl/unmapped/todo/dH
 CLASS __pycache__/dI keystrokesmod/module/impl/unmapped/todo/dI
+CLASS __pycache__/dK keystrokesmod/module/impl/movement/TestWallClimb
 CLASS __pycache__/dN keystrokesmod/module/impl/unmapped/todo/dN
 CLASS __pycache__/dR keystrokesmod/module/impl/unmapped/todo/dR
 CLASS __pycache__/dS keystrokesmod/module/impl/unmapped/todo/dS
+	METHOD dR onLeftClickMouse ()V
+CLASS __pycache__/dV keystrokesmod/module/impl/combat/MoreKB
+	FIELD C mode L__pycache__/jn;
 CLASS __pycache__/dX keystrokesmod/module/impl/unmapped/todo/dX
 CLASS __pycache__/dh keystrokesmod/module/impl/client/Notifications/NotificationTypes
 	FIELD au values [L__pycache__/dh;
 	METHOD valueOf (Ljava/lang/String;)L__pycache__/dh;
 		ARG 0 key
-CLASS __pycache__/dk keystrokesmod/module/impl/unmapped/todo/dk
+CLASS __pycache__/dk keystrokesmod/module/impl/unmapped/movement/WallClimb
+	FIELD C mode L__pycache__/jn;
 CLASS __pycache__/dr keystrokesmod/module/impl/unmapped/todo/dr
 CLASS __pycache__/dt
 	METHOD b getValueInt (III)I
@@ -196,6 +245,7 @@ CLASS __pycache__/eq keystrokesmod/module/impl/unmapped/todo/eq
 CLASS __pycache__/es keystrokesmod/eventbus/EventBus
 	METHOD a register (Ljava/lang/Object;)V
 	METHOD g unregister (Ljava/lang/Object;)V
+	METHOD j post (L__pycache__/gF;)V
 CLASS __pycache__/ex keystrokesmod/module/impl/unmapped/todo/ex
 CLASS __pycache__/fF keystrokesmod/module/impl/unmapped/todo/fF
 CLASS __pycache__/fK keystrokesmod/module/impl/unmapped/todo/fK
@@ -244,6 +294,7 @@ CLASS __pycache__/fh keystrokesmod/module/impl/unmapped/todo/fh
 CLASS __pycache__/fj keystrokesmod/module/impl/unmapped/todo/fj
 CLASS __pycache__/fo keystrokesmod/module/impl/unmapped/todo/fo
 CLASS __pycache__/fr keystrokesmod/module/impl/unmapped/todo/fr
+CLASS __pycache__/fw keystrokesmod/module/impl/movement/VulcanWallClimb
 CLASS __pycache__/fx keystrokesmod/utility/DebugInfoRenderer
 CLASS __pycache__/fz keystrokesmod/module/impl/unmapped/todo/fz
 CLASS __pycache__/gB keystrokesmod/module/setting/impl/ButtonSetting
@@ -270,10 +321,14 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 	FIELD d enemies Ljava/util/HashSet;
 	FIELD e friends Ljava/util/HashSet;
 	FIELD f log Lorg/apache/logging/log4j/Logger;
+	FIELD g delayedMessage Ljava/util/Queue;
+	FIELD h HYPIXEL_IPS Ljava/util/List;
+	FIELD j objArray Ljava/lang/Object;
 	METHOD G isFriend (Lnet/minecraft/entity/player/EntityPlayer;)Z
 	METHOD L correctValue (L__pycache__/jB;L__pycache__/jB;)V
 	METHOD N isFriended (Lnet/minecraft/entity/player/EntityPlayer;)Z
 	METHOD Q nullCheck ()Z
+	METHOD R isHypixel ()Z
 	METHOD a addFriend (Ljava/lang/String;)Z
 		ARG 0 name
 	METHOD aF getChroma (J[J)I
@@ -281,6 +336,7 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 	METHOD aa isTeamMate (Lnet/minecraft/entity/Entity;)Z
 	METHOD ay removeFormatCodes (Ljava/lang/String;)Ljava/lang/String;
 	METHOD bq handleException (Ljava/lang/Throwable;Ljava/lang/String;)V
+	METHOD bz getObj (C)Ljava/lang/Object;
 	METHOD g removeEnemy (Ljava/lang/String;)V
 		ARG 0 name
 	METHOD h addEnemy (Ljava/lang/String;)Z
@@ -399,6 +455,7 @@ CLASS __pycache__/iT keystrokesmod/module/impl/movement/Sprint
 CLASS __pycache__/iU keystrokesmod/module/impl/unmapped/todo/iU
 CLASS __pycache__/ib keystrokesmod/utility/CoolDown
 CLASS __pycache__/ig keystrokesmod/module/impl/unmapped/todo/ig
+CLASS __pycache__/ii keystrokesmod/module/impl/movement/wallclimb/IntaveWallClimb
 CLASS __pycache__/ir keystrokesmod/event/client/MouseEvent
 	FIELD Y x I
 	FIELD Z y I
@@ -465,6 +522,7 @@ CLASS __pycache__/jg keystrokesmod/event/render/Render3DEvent
 CLASS __pycache__/jh keystrokesmod/module/impl/client/DiscordRpc
 	FIELD C modes L__pycache__/jn;
 CLASS __pycache__/jk keystrokesmod/module/impl/unmapped/todo/jk
+	METHOD dR onLeftClickMouse ()V
 CLASS __pycache__/jl keystrokesmod/module/impl/unmapped/todo/jl
 CLASS __pycache__/jm keystrokesmod/module/impl/unmapped/todo/jm
 CLASS __pycache__/jn keystrokesmod/module/setting/impl/ModeValue
@@ -551,6 +609,7 @@ CLASS __pycache__/lL keystrokesmod/utility/i18n/I18nModule
 	METHOD c getI18nObject ()Ljava/util/Map;
 CLASS __pycache__/lP keystrokesmod/module/impl/combat/criticals/TimerCriticals
 CLASS __pycache__/lR keystrokesmod/module/impl/unmapped/todo/lR
+CLASS __pycache__/lV __pycache__/RightClickEvent
 CLASS __pycache__/lX keystrokesmod/module/impl/unmapped/todo/lX
 CLASS __pycache__/lZ keystrokesmod/module/impl/unmapped/todo/lZ
 CLASS __pycache__/ld keystrokesmod/utility/Reflection
