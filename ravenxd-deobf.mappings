@@ -421,6 +421,8 @@ CLASS __pycache__/fd keystrokesmod/module/impl/unmapped/todo/fd
 CLASS __pycache__/fh keystrokesmod/module/impl/unmapped/todo/fh
 CLASS __pycache__/fj keystrokesmod/module/impl/unmapped/todo/fj
 	METHOD ga getColors ()Ljava/util/List;
+CLASS __pycache__/fn tech/skidonion/obfuscator/annotations/ControlFlowObfuscation
+	METHOD a obfuscated ()Z
 CLASS __pycache__/fo keystrokesmod/module/impl/unmapped/todo/fo
 CLASS __pycache__/fr keystrokesmod/module/impl/unmapped/todo/fr
 CLASS __pycache__/fw keystrokesmod/module/impl/movement/VulcanWallClimb
@@ -610,6 +612,8 @@ CLASS __pycache__/iT keystrokesmod/module/impl/movement/Sprint
 	METHOD h onPreMotion (L__pycache__/ly;)V
 		ARG 1 event
 CLASS __pycache__/iU keystrokesmod/module/impl/unmapped/todo/iU
+CLASS __pycache__/iX tech/skidonion/obfuscator/annotations/StringEncryption
+	METHOD a obfuscated ()Z
 CLASS __pycache__/ib keystrokesmod/utility/CoolDown
 CLASS __pycache__/ig keystrokesmod/module/impl/unmapped/todo/ig
 CLASS __pycache__/ii keystrokesmod/module/impl/movement/wallclimb/IntaveWallClimb
