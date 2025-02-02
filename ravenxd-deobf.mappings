@@ -733,6 +733,33 @@ CLASS __pycache__/lL keystrokesmod/utility/i18n/I18nModule
 	METHOD b getToolTip ()Ljava/lang/String;
 	METHOD c getI18nObject ()Ljava/util/Map;
 CLASS __pycache__/lN keystrokesmod/event/player/MoveInputEvent
+	FIELD ax jump Z
+	FIELD ay sneak Z
+	FIELD az sneakSlowDown D
+	FIELD n strafe F
+	FIELD o forward F
+	METHOD <init> (FFZZD)V
+		ARG 1 forward
+		ARG 2 strafe
+		ARG 3 jump
+		ARG 4 sneak
+		ARG 5 sneakSlowDOwn
+	METHOD aB cancel ()V
+	METHOD bt setJump (Z)V
+		ARG 1 jump
+	METHOD bu setSneak (Z)V
+		ARG 1 sneak
+	METHOD bv setSneakSlowDown (D)V
+		ARG 1 sneakSlowDown
+	METHOD bw getJump ()Z
+	METHOD bx isSneak ()Z
+	METHOD by getSneakSlowDown ()D
+	METHOD v setStrafe (F)V
+		ARG 1 strafe
+	METHOD w setForward (F)V
+		ARG 1 forward
+	METHOD y getStrafe ()F
+	METHOD z getForward ()F
 CLASS __pycache__/lP keystrokesmod/module/impl/combat/criticals/TimerCriticals
 CLASS __pycache__/lR keystrokesmod/module/impl/unmapped/todo/lR
 CLASS __pycache__/lV keystrokesmod/event/render/SwingAnimationEvent
