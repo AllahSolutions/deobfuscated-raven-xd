@@ -222,6 +222,7 @@ CLASS __pycache__/cB net/arikia/dev/drpc/DiscordRPC
 	METHOD g discordRunCallbacks ()V
 	METHOD h discordUpdatePresence (L__pycache__/cU;)V
 CLASS __pycache__/cG keystrokesmod/module/impl/unmapped/todo/cG
+CLASS __pycache__/cI tech/skidonion/VM
 CLASS __pycache__/cJ keystrokesmod/utility/I18nManager
 	METHOD a init ()V
 CLASS __pycache__/cK keystrokesmod/module/impl/unmapped/todo/cK
@@ -254,7 +255,12 @@ CLASS __pycache__/cU net/arikia/dev/drpc/DiscordRichPresence
 	FIELD n joinSecret Ljava/lang/String;
 CLASS __pycache__/cX keystrokesmod/module/impl/unmapped/todo/cX
 CLASS __pycache__/cf keystrokesmod/anticrack/AntiCrack
+	FIELD CLIENT_NAME CLIENT_NAME Ljava/lang/String;
+	FIELD TYPE TYPE Ljava/lang/String;
+	METHOD a init ()V
 	METHOD c UNREACHABLE ([Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 0 ignoredParams
+	METHOD d checkThread ()V
 CLASS __pycache__/cm keystrokesmod/module/impl/world/AntiBot
 	METHOD dK isBot (Lnet/minecraft/entity/Entity;)Z
 CLASS __pycache__/cr keystrokesmod/module/impl/unmapped/todo/cr
@@ -416,6 +422,8 @@ CLASS __pycache__/fX keystrokesmod/utility/Theme
 		ARG 0 len
 CLASS __pycache__/fZ tech/skidonion/obfuscator/annotations/NativeObfuscation
 	METHOD a obfuscated ()Z
+	METHOD b manualTryCatch ()Z
+	METHOD c vm ()L__pycache__/cI;
 CLASS __pycache__/fb keystrokesmod/module/impl/unmapped/todo/fb
 CLASS __pycache__/fd keystrokesmod/module/impl/unmapped/todo/fd
 CLASS __pycache__/fh keystrokesmod/module/impl/unmapped/todo/fh
@@ -669,6 +677,7 @@ CLASS __pycache__/jO keystrokesmod/event/player/SprintEvent
 	METHOD aW setSprinting (Z)V
 CLASS __pycache__/jT com/sun/jna/Structure
 CLASS __pycache__/jV keystrokesmod/module/impl/unmapped/todo/jV
+CLASS __pycache__/jY tech/skidonion/obfuscator/annotations/NativeObfuscation
 CLASS __pycache__/jZ keystrokesmod/utility/ReflectionUtils
 	METHOD f get (Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 	METHOD g getDeclared (Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
