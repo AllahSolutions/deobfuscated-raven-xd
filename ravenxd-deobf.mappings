@@ -171,8 +171,19 @@ CLASS __pycache__/aw keystrokesmod/event/render/PreRenderPlayerEvent
 	METHOD q getX ()D
 	METHOD r getY ()D
 	METHOD s getZ ()D
-CLASS __pycache__/b keystrokesmod/module/impl/unmapped/todo/b
-CLASS __pycache__/bT keystrokesmod/module/impl/unmapped/todo/bT
+CLASS __pycache__/b keystrokesmod/module/impl/render/Particles
+	FIELD d multiplier L__pycache__/jB;
+	FIELD e alwaysSharpness L__pycache__/gB;
+	FIELD f alwaysCriticals L__pycache__/gB;
+CLASS __pycache__/bT keystrokesmod/module/impl/fun/SlyPort
+	FIELD de aim L__pycache__/gB;
+	FIELD iJ description L__pycache__/eK;
+	FIELD iK range L__pycache__/jB;
+	FIELD iL playSound L__pycache__/gB;
+	FIELD iM playersOnly L__pycache__/gB;
+	METHOD dw tp (Lnet/minecraft/entity/Entity;)V
+		ARG 1 en
+	METHOD dx ge ()Lnet/minecraft/entity/Entity;
 CLASS __pycache__/bY keystrokesmod/module/impl/unmapped/todo/bY
 CLASS __pycache__/bf keystrokesmod/module/impl/unmapped/todo/bf
 CLASS __pycache__/bi keystrokesmod/utility/ai/chatgpt/ConversationContext
@@ -449,6 +460,7 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 	METHOD aF getChroma (J[J)I
 	METHOD aW getEyeHeight ()F
 	METHOD aa isTeamMate (Lnet/minecraft/entity/Entity;)Z
+	METHOD ak aim (Lnet/minecraft/entity/Entity;F)V
 	METHOD ay removeFormatCodes (Ljava/lang/String;)Ljava/lang/String;
 	METHOD bh sendClick (IZ)V
 	METHOD bq handleException (Ljava/lang/Throwable;Ljava/lang/String;)V
