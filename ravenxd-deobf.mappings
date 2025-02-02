@@ -244,6 +244,8 @@ CLASS __pycache__/dV keystrokesmod/module/impl/combat/MoreKB
 	FIELD C mode L__pycache__/jn;
 	METHOD bN onSprint (L__pycache__/jO;)V
 		ARG 1 event
+	METHOD f onMoveInput (L__pycache__/lN;)V
+		ARG 1 event
 	METHOD h onPreMotion (L__pycache__/ly;)V
 		ARG 1 event
 CLASS __pycache__/dX keystrokesmod/module/impl/unmapped/todo/dX
@@ -730,6 +732,7 @@ CLASS __pycache__/lL keystrokesmod/utility/i18n/I18nModule
 	METHOD a getName ()Ljava/lang/String;
 	METHOD b getToolTip ()Ljava/lang/String;
 	METHOD c getI18nObject ()Ljava/util/Map;
+CLASS __pycache__/lN keystrokesmod/event/player/MoveInputEvent
 CLASS __pycache__/lP keystrokesmod/module/impl/combat/criticals/TimerCriticals
 CLASS __pycache__/lR keystrokesmod/module/impl/unmapped/todo/lR
 CLASS __pycache__/lV keystrokesmod/event/render/SwingAnimationEvent
