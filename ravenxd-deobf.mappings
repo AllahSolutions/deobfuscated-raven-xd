@@ -185,10 +185,13 @@ CLASS __pycache__/bT keystrokesmod/module/impl/fun/SlyPort
 		ARG 1 en
 	METHOD dx ge ()Lnet/minecraft/entity/Entity;
 CLASS __pycache__/bY keystrokesmod/module/impl/client/Test
+	METHOD dA timeIt (Ljava/lang/Runnable;)D
+	METHOD dB benchmark ()V
 	METHOD dC benchmarkNative ()V
 	METHOD dE diffusionNative (I)J
+		ARG 0 depth
 	METHOD dG crash ()V
-	METHOD dz benchmark ()V
+	METHOD dz checkAndReport ()V
 CLASS __pycache__/bf keystrokesmod/module/impl/unmapped/todo/bf
 CLASS __pycache__/bi keystrokesmod/utility/ai/chatgpt/ConversationContext
 	FIELD a messages Lorg/json/JSONArray;
@@ -458,6 +461,7 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 	METHOD N isFriended (Lnet/minecraft/entity/player/EntityPlayer;)Z
 	METHOD Q nullCheck ()Z
 	METHOD R isHypixel ()Z
+	METHOD T getTimer ()Lnet/minecraft/util/Timer;
 	METHOD a addFriend (Ljava/lang/String;)Z
 		ARG 0 name
 	METHOD aE raytrace (I)Lnet/minecraft/entity/EntityLivingBase;
@@ -661,6 +665,9 @@ CLASS __pycache__/jO keystrokesmod/event/player/SprintEvent
 	METHOD aW setSprinting (Z)V
 CLASS __pycache__/jT com/sun/jna/Structure
 CLASS __pycache__/jV keystrokesmod/module/impl/unmapped/todo/jV
+CLASS __pycache__/jZ keystrokesmod/utility/ReflectionUtils
+	METHOD f get (Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+	METHOD g getDeclared (Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 CLASS __pycache__/jc keystrokesmod/module/impl/unmapped/todo/jc
 CLASS __pycache__/je keystrokesmod/module/impl/unmapped/todo/je
 CLASS __pycache__/jf keystrokesmod/module/setting/impl/SubMode
