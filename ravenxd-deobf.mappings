@@ -1,7 +1,7 @@
 CLASS __pycache__/D keystrokesmod/module/impl/unmapped/combat/D
 CLASS __pycache__/E keystrokesmod/module/impl/exploit/ClientSpoofer
 	FIELD V customBrand Ljava/lang/String;
-CLASS __pycache__/F __pycache__/SwingAnimationEvent
+CLASS __pycache__/F __pycache__/EmptyEvent
 CLASS __pycache__/I keystrokesmod/module/impl/other/ChatAI
 	FIELD C mode L__pycache__/jn;
 	FIELD af chatGPT L__pycache__/aq;
@@ -117,11 +117,11 @@ CLASS __pycache__/aa keystrokesmod/module/impl/world/AutoTool
 CLASS __pycache__/ab keystrokesmod/module/impl/player/AutoPot
 CLASS __pycache__/af keystrokesmod/module/impl/render/MotionCamera
 CLASS __pycache__/ag keystrokesmod/module/impl/other/AutoPlay
-CLASS __pycache__/ak keystrokesmod/module/impl/unmapped/todo/ak
+CLASS __pycache__/ak keystrokesmod/module/impl/combat/morekb/IMoreKB
 CLASS __pycache__/al keystrokesmod/module/impl/combat/KillAura
 	FIELD br target Lnet/minecraft/entity/EntityLivingBase;
 	METHOD ax noAimToEntity ()Z
-CLASS __pycache__/am keystrokesmod/module/impl/unmapped/todo/am
+CLASS __pycache__/am keystrokesmod/module/impl/combat/HitSelect
 CLASS __pycache__/ao keystrokesmod/module/impl/unmapped/todo/ao
 CLASS __pycache__/aq keystrokesmod/module/impl/other/chatai/ChatGPTChatAI
 	FIELD dj model L__pycache__/bt;
@@ -525,6 +525,7 @@ CLASS __pycache__/hQ keystrokesmod/eventbus/CancellableEvent
 CLASS __pycache__/hS keystrokesmod/module/impl/unmapped/todo/hS
 CLASS __pycache__/hY keystrokesmod/module/impl/unmapped/todo/hY
 CLASS __pycache__/hd keystrokesmod/module/impl/unmapped/todo/hd
+CLASS __pycache__/he keystrokesmod/module/impl/combat/morekb/SimpleSprintReset
 CLASS __pycache__/hg keystrokesmod/module/impl/unmapped/todo/hg
 CLASS __pycache__/hn keystrokesmod/event/render/Render2DEvent
 CLASS __pycache__/hs keystrokesmod/module/impl/unmapped/todo/hs
