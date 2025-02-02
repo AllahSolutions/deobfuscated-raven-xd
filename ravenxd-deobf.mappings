@@ -743,7 +743,7 @@ CLASS __pycache__/lN keystrokesmod/event/player/MoveInputEvent
 		ARG 2 strafe
 		ARG 3 jump
 		ARG 4 sneak
-		ARG 5 sneakSlowDOwn
+		ARG 5 sneakSlowDown
 	METHOD aB cancel ()V
 	METHOD bt setJump (Z)V
 		ARG 1 jump
