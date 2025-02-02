@@ -222,7 +222,7 @@ CLASS __pycache__/cB net/arikia/dev/drpc/DiscordRPC
 	METHOD g discordRunCallbacks ()V
 	METHOD h discordUpdatePresence (L__pycache__/cU;)V
 CLASS __pycache__/cG keystrokesmod/module/impl/unmapped/todo/cG
-CLASS __pycache__/cI tech/skidonion/VM
+CLASS __pycache__/cI tech/skidonion/obfuscator/annotations/NativeObfuscation
 CLASS __pycache__/cJ keystrokesmod/utility/I18nManager
 	METHOD a init ()V
 CLASS __pycache__/cK keystrokesmod/module/impl/unmapped/todo/cK
@@ -423,7 +423,7 @@ CLASS __pycache__/fX keystrokesmod/utility/Theme
 CLASS __pycache__/fZ tech/skidonion/obfuscator/annotations/NativeObfuscation
 	METHOD a obfuscated ()Z
 	METHOD b manualTryCatch ()Z
-	METHOD c vm ()L__pycache__/cI;
+	METHOD c virtualize ()L__pycache__/cI;
 CLASS __pycache__/fb keystrokesmod/module/impl/unmapped/todo/fb
 CLASS __pycache__/fd keystrokesmod/module/impl/unmapped/todo/fd
 CLASS __pycache__/fh keystrokesmod/module/impl/unmapped/todo/fh
