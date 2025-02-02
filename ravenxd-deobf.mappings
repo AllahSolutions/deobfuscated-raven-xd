@@ -118,6 +118,8 @@ CLASS __pycache__/ab keystrokesmod/module/impl/player/AutoPot
 CLASS __pycache__/af keystrokesmod/module/impl/render/MotionCamera
 CLASS __pycache__/ag keystrokesmod/module/impl/other/AutoPlay
 CLASS __pycache__/ak keystrokesmod/module/impl/combat/morekb/IMoreKB
+	METHOD an stopSprint ()V
+	METHOD ap noSprint ()Z
 CLASS __pycache__/al keystrokesmod/module/impl/combat/KillAura
 	FIELD br target Lnet/minecraft/entity/EntityLivingBase;
 	METHOD ax noAimToEntity ()Z
@@ -240,6 +242,10 @@ CLASS __pycache__/dS keystrokesmod/module/impl/unmapped/todo/dS
 	METHOD dR onLeftClickMouse ()V
 CLASS __pycache__/dV keystrokesmod/module/impl/combat/MoreKB
 	FIELD C mode L__pycache__/jn;
+	METHOD bN onSprint (L__pycache__/jO;)V
+		ARG 1 event
+	METHOD h onPreMotion (L__pycache__/ly;)V
+		ARG 1 event
 CLASS __pycache__/dX keystrokesmod/module/impl/unmapped/todo/dX
 CLASS __pycache__/dd keystrokesmod/utility/ai/chatgpt/ChatGPTClient
 	METHOD a sendMessage (Ljava/lang/String;L__pycache__/bi;L__pycache__/cP;)L__pycache__/bi;
@@ -425,6 +431,7 @@ CLASS __pycache__/ge keystrokesmod/utility/Utils
 	METHOD aW getEyeHeight ()F
 	METHOD aa isTeamMate (Lnet/minecraft/entity/Entity;)Z
 	METHOD ay removeFormatCodes (Ljava/lang/String;)Ljava/lang/String;
+	METHOD bh sendClick (IZ)V
 	METHOD bq handleException (Ljava/lang/Throwable;Ljava/lang/String;)V
 	METHOD bz getObj (C)Ljava/lang/Object;
 	METHOD g removeEnemy (Ljava/lang/String;)V
@@ -603,6 +610,7 @@ CLASS __pycache__/ir keystrokesmod/event/client/MouseEvent
 CLASS __pycache__/iv keystrokesmod/module/impl/unmapped/todo/iv
 CLASS __pycache__/ix keystrokesmod/utility/MoveUtil
 	METHOD B jump ()V
+	METHOD r isMoving ()Z
 CLASS __pycache__/jB keystrokesmod/module/setting/impl/SliderSetting
 CLASS __pycache__/jH keystrokesmod/module/impl/unmapped/todo/jH
 CLASS __pycache__/jI keystrokesmod/module/impl/unmapped/todo/jI
@@ -614,6 +622,8 @@ CLASS __pycache__/jK keystrokesmod/clickgui/components/impl/CategoryComponent
 CLASS __pycache__/jL keystrokesmod/module/impl/unmapped/todo/jL
 CLASS __pycache__/jM keystrokesmod/module/impl/unmapped/todo/jM
 CLASS __pycache__/jN net/arikia/dev/drpc/DiscordUser
+CLASS __pycache__/jO keystrokesmod/event/player/SprintEvent
+	METHOD aW setSprinting (Z)V
 CLASS __pycache__/jT com/sun/jna/Structure
 CLASS __pycache__/jV keystrokesmod/module/impl/unmapped/todo/jV
 CLASS __pycache__/jc keystrokesmod/module/impl/unmapped/todo/jc
