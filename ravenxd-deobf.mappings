@@ -194,7 +194,8 @@ CLASS __pycache__/cG keystrokesmod/module/impl/unmapped/todo/cG
 CLASS __pycache__/cJ keystrokesmod/utility/I18nManager
 	METHOD a init ()V
 CLASS __pycache__/cK keystrokesmod/module/impl/unmapped/todo/cK
-CLASS __pycache__/cL keystrokesmod/module/impl/unmapped/todo/cL
+CLASS __pycache__/cL keystrokesmod/module/impl/fun/Yeet
+	FIELD kl enableTicks I
 CLASS __pycache__/cP keystrokesmod/utility/ai/GPTModels
 	FIELD ak prettyName Ljava/lang/String;
 	FIELD al apiName Ljava/lang/String;
@@ -221,6 +222,8 @@ CLASS __pycache__/cU net/arikia/dev/drpc/DiscordRichPresence
 	FIELD m spectateSecret Ljava/lang/String;
 	FIELD n joinSecret Ljava/lang/String;
 CLASS __pycache__/cX keystrokesmod/module/impl/unmapped/todo/cX
+CLASS __pycache__/cf keystrokesmod/anticrack/AntiCrack
+	METHOD c UNREACHABLE ([Ljava/lang/Object;)Ljava/lang/Object;
 CLASS __pycache__/cm keystrokesmod/module/impl/world/AntiBot
 	METHOD dK isBot (Lnet/minecraft/entity/Entity;)Z
 CLASS __pycache__/cr keystrokesmod/module/impl/unmapped/todo/cr
