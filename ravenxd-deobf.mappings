@@ -184,7 +184,11 @@ CLASS __pycache__/bT keystrokesmod/module/impl/fun/SlyPort
 	METHOD dw tp (Lnet/minecraft/entity/Entity;)V
 		ARG 1 en
 	METHOD dx ge ()Lnet/minecraft/entity/Entity;
-CLASS __pycache__/bY keystrokesmod/module/impl/unmapped/todo/bY
+CLASS __pycache__/bY keystrokesmod/module/impl/client/Test
+	METHOD dC benchmarkNative ()V
+	METHOD dE diffusionNative (I)J
+	METHOD dG crash ()V
+	METHOD dz benchmark ()V
 CLASS __pycache__/bf keystrokesmod/module/impl/unmapped/todo/bf
 CLASS __pycache__/bi keystrokesmod/utility/ai/chatgpt/ConversationContext
 	FIELD a messages Lorg/json/JSONArray;
