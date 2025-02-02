@@ -127,11 +127,17 @@ CLASS __pycache__/am keystrokesmod/module/impl/combat/HitSelect
 CLASS __pycache__/ao keystrokesmod/module/impl/render/Tracers
 	FIELD da showInvis L__pycache__/gB;
 	FIELD db r L__pycache__/jB;
-	FIELD dc g L__pycache__/jB;
+	FIELD dc colorG L__pycache__/jB;
 	FIELD dd b L__pycache__/jB;
 	FIELD de rainbow L__pycache__/gB;
 	FIELD df lineWidth L__pycache__/jB;
 	FIELD dg distanceColor L__pycache__/gB;
+	FIELD dh g Z
+	FIELD di rgb_c I
+	METHOD bf getColorBasedOnDistance (D)I
+		ARG 1 distance
+	METHOD t onRender (L__pycache__/jg;)V
+		ARG 1 event
 CLASS __pycache__/aq keystrokesmod/module/impl/other/chatai/ChatGPTChatAI
 	FIELD dj model L__pycache__/bt;
 	FIELD dk keepContext L__pycache__/gB;
@@ -408,6 +414,7 @@ CLASS __pycache__/gB keystrokesmod/module/setting/impl/ButtonSetting
 CLASS __pycache__/gC keystrokesmod/utility/render/RenderUtils
 	FIELD b ring_c Z
 	METHOD p renderEntity (Lnet/minecraft/entity/Entity;IDDIZ)V
+	METHOD w dtl (Lnet/minecraft/entity/Entity;IF)V
 CLASS __pycache__/gD keystrokesmod/module/impl/other/SlotHandler
 	METHOD gA getCurrentSlot ()I
 	METHOD gB setCurrentSlot (I)V
